@@ -1,6 +1,9 @@
 %h1= @job.title
+%p= @job.category.name
 %p= @job.description
 %p= @job.location
 %p= @job.salary
+%p= @job.company
+
 
 = link_to "Edit", edit_job_path(@job)
