@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  description: 
+  location: 
+  salary: 
+  vacancy_status: 
+  category_id: 1
+
+two:
+  title: 
+  description: 
+  location: 
+  salary: 
+  vacancy_status: 
+  category_id: 1
