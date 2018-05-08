@@ -1,0 +1,13 @@
+= simple_form_for(@client, html: {class: 'form-horizontal'}) do |f|
+  = f.input :status,  collection: Client.statuses.keys, label: "Select your first key"
+  = f.input :contact_name, label: "Contact"
+  = f.input :company, label: "Company"
+  = f.input :address, label: "Address"
+  = f.input :phone_number, label: "Phone Number"
+  = f.input :email, label: "Email"
+  = f.input :comments, label: "Comments"
+  = f.input :other, label: "Other"
+
+
+  %br
+  = f.button :submit, label: "Submit"
