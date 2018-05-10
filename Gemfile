@@ -10,11 +10,12 @@ gem 'jquery-rails'
 
 # # Plus integrations with:
 gem 'devise'
-gem 'cancan' # or cancancan
+# gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
 gem 'activeadmin'
-
+gem 'kaminari'
+gem 'cancancan', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
