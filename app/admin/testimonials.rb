@@ -1,8 +1,8 @@
-ActiveAdmin.register Manager do
+ActiveAdmin.register Testimonial do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :email, :password
+permit_params :name, :position, :company, :client_since, :description
 #
 # or
 #
