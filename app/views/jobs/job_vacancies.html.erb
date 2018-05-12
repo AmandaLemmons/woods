@@ -27,53 +27,69 @@
   </div><!-- /.container -->
 </div><!-- tr-breadcrumb -->
 <%= render partial: "jobs/filters" %>
+<%= render partial: "jobs/four_column" %>
+<%= render partial: "jobs/two_column" %>
 
-    <div class="tab-content tr-job-posted">
+
+    <!-- <div class="tab-content tr-job-posted">
       <div role="tabpanel" class="tab-pane fade in active" id="four-colum">
         <div class="row">
+        <% @jobs.each do |job| %>
           <div class="col-sm-6 col-md-3">
-            <div class="job-item">
-              <div class="item-overlay">
+              <div class="job-item">
+                <div class="item-overlay">
+                  <div class="job-info">
+                    <a href="#" class="btn btn-primary"><%= job.category.name %></a>
+                    <span class="tr-title">
+                      <a href="job-details.html"><%= job.title %></a>
+                      <span><a href="#">Dig File</a></span>
+                    </span>
+                    <ul class="tr-list job-meta">
+                      <li><i class="fa fa-map-signs" aria-hidden="true"></i><%= job.location %></li>
+                      <li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
+                      <li><i class="fa fa-money" aria-hidden="true"></i><%= job.salary %></li>
+                    </ul>
+                    <ul class="job-social tr-list">
+                      <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+                      <li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="job-info">
-                  <a href="#" class="btn btn-primary">Full Time</a>
+                  <div class="company-logo">
+                    <img src="images/job/1.png" alt="images" class="img-responsive">
+                  </div>
                   <span class="tr-title">
-                    <a href="job-details.html">Project Manager</a>
+                    <a href="#"><%= job.title %></a>
                     <span><a href="#">Dig File</a></span>
                   </span>
                   <ul class="tr-list job-meta">
-                    <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-                    <li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-                    <li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+                    <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location %></li>
+                    <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                    <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$<%= job.salary %></li>
                   </ul>
-                  <ul class="job-social tr-list">
-                    <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-                    <li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="job-info">
-                <div class="company-logo">
-                  <img src="images/job/1.png" alt="images" class="img-responsive">
-                </div>
-                <span class="tr-title">
-                  <a href="#">Project Manager</a>
-                  <span><a href="#">Dig File</a></span>
-                </span>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-                <div class="time">
-                  <a href="#"><span>Full Time</span></a>
-                  <span class="pull-right">Posted 23 hours ago</span>
+                  <div class="time">
+                    <a href="#"><span><%= job.category.name %></span></a>
+                    <span class="pull-right"><%= time_ago_in_words(job.updated_at) %> ago</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <% end %>
           </div>
-          <div class="col-sm-6 col-md-3">
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+          <!-- <div class="col-sm-6 col-md-3">
             <div class="job-item">
               <div class="item-overlay">
                 <div class="job-info">
@@ -368,19 +384,10 @@
             </div>
           </div>
         </div><!-- /.row -->
+        <%= render partial: "pages/add_resume_banner" %>
 
-        <div class="tr-cta">
-          <div class="cta-content section">
-            <div class="cta-info">
-              <div class="pull-left">
-                <h1>Add your resume and let your next job find you.</h1>
-              </div>
-              <a href="#" class="btn btn-primary pull-right">Add Your Resume</a>
-            </div>
-          </div><!-- /.cta-content -->
-        </div><!-- /.tr-cta -->
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="job-item">
               <div class="item-overlay">
@@ -632,8 +639,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
+          </div> -->
+          <!-- <div class="col-sm-6 col-md-3">
             <div class="job-item">
               <div class="item-overlay">
                 <div class="job-info">
@@ -718,9 +725,174 @@
             </div>
           </div>
         </div><!-- /.row -->
-      </div><!-- /.tab-pane -->
-      <div role="tabpanel" class="tab-pane fade two-column" id="two-column">
+      <!--</div><!-- /.tab-pane -->
+      <!-- <div role="tabpanel" class="tab-pane fade two-column" id="two-column">
         <div class="row">
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/1.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/2.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/3.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/4.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/5.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>  -->
+          <!-- <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/6.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/7.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <div class="company-logo">
+                    <img src="images/job/8.png" alt="images" class="img-responsive">
+                  </div>
+                  <span class="tr-title">
+                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+
+
+        <!-- <div class="row">
           <div class="col-sm-6">
             <div class="job-item">
               <div class="job-info">
@@ -879,187 +1051,13 @@
                   <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
                 </ul>
               </div>
-            </div>
-          </div>
+            </div> -->
+          <!-- </div>
         </div><!-- /.row -->
-
-        <div class="tr-cta">
-          <div class="cta-content section">
-            <div class="cta-info">
-              <div class="pull-left">
-                <h1>Add your resume and let your next job find you.</h1>
-              </div>
-              <a href="#" class="btn btn-primary pull-right">Add Your Resume</a>
-            </div>
-          </div><!-- /.cta-content -->
-        </div><!-- /.tr-cta -->
-
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/1.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/2.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/3.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/4.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/5.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/6.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/7.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <div class="company-logo">
-                    <img src="images/job/8.png" alt="images" class="img-responsive">
-                  </div>
-                  <span class="tr-title">
-                    <a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-                  </span>
-                  <span><a href="#" class="btn btn-primary">Part Time</a></span>
-                </div>
-                <ul class="tr-list job-meta">
-                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.tab-pane -->
-    </div><!-- /.tab-content -->
-  </div><!-- /.container -->
-</div><!-- /.jobs-listing -->
+        <!--</div><!-- /.tab-pane -->
+      <!--</div><!-- /.tab-content -->
+    <!--</div><!-- /.container -->
+  <!--</div><!-- /.jobs-listing -->
 
 <div class="tr-download-app bg-image section-padding section-before">
   <div class="container text-center">
