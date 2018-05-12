@@ -1,0 +1,15 @@
+.tr-category.section-padding
+  .container
+    .section-title
+      %h1 Browse Jobs By Category
+    %ul.category-list.tr-list
+      - @categories.each do |category|
+        %li
+          %a{:href => "#"}
+            %span.icon
+              %img.img-responsive{:alt => "Icon", :src => "images/icons/category1.png"}
+              %span.category-title= category.name
+              %span.category-quantity
+              = Job.where(category_id: category.id).count
+
+    
