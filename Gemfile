@@ -16,6 +16,8 @@ gem 'pundit'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'cancancan', '~> 2.0'
+gem "font-awesome-rails"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

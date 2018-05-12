@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   }
   resources :jobs
   resources :clients
+
+  get 'about-us' => 'pages#about_us', as: :about_us
+  get 'contact-us' => 'pages#contact_us', as: :contact_us
+  get 'job-vacancies' => 'pages#job_vacancies', as: :job_vacancies
+
 end

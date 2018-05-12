@@ -3,88 +3,25 @@
 -elsif candidate_signed_in?
   =render 'layouts/manager_navbar'
 -else
--# %header.tr-header
--#   %nav.navbar.navbar-default
--#     .container
--#       .navbar-header
--#         %button.navbar-toggle.collapsed{"data-target" => "#navbar-collapse", "data-toggle" => "collapse", :type => "button"}
--#           %span.sr-only Toggle navigation
--#           %span.icon-bar
--#           %span.icon-bar
--#           %span.icon-bar
--#         %a.navbar-brand{:href => "index.html"}
--#           %img.img-responsive{:alt => "Logo", :src => "images/logo.png"}/
--#       / /.navbar-header
--#       .navbar-left
--#         #navbar-collapse.collapse.navbar-collapse
--#           %ul.nav.navbar-nav
--#             %li.tr-dropdown.active
--#               %a{:href => "#"} Home
--#               %ul.tr-dropdown-menu.left.tr-list.fadeInUp{:role => "menu"}
--#                 %li.active
--#                   %a{:href => "index.html"} Home Page V-1
--#                 %li
--#                   %a{:href => "index1.html"} Home Page V-2
--#             %li
--#               %a{:href => "job-post.html"} Post A Job
--#             %li
--#               %a{:href => "listing.html"} Job List
--#             %li
--#               %a{:href => "job-details.html"} Job Details
--#             %li.tr-dropdown
--#               %a{:href => "#"} Pages
--#               %ul.tr-dropdown-menu.tr-list.fadeInUp{:role => "menu"}
--#                 %li
--#                   %a{:href => "employee-profile.html"} Employee Profile
--#                 %li
--#                   %a{:href => "employer-profile.html"} Employer Profile
--#                 %li
--#                   %a{:href => "view-compnay.html"} View Compnay
--#                 %li
--#                   %a{:href => "view-resume.html"} View Resume
--#                 %li
--#                   %a{:href => "coming-soon.html"} Coming Soon
--#                 %li
--#                   %a{:href => "notification.html"} Notification
--#                 %li
--#                   %a{:href => "contact.html"} Contact
--#                 %li
--#                   %a{:href => "pricing.html"} Pricing
--#                 %li
--#                   %a{:href => "signup.html"} Sign Up
--#                 %li
--#                   %a{:href => "signin.html"} Sign In
--#                 %li
--#                   %a{:href => "500.html"} 500 Opsss
--#                 %li
--#                   %a{:href => "404.html"} 404 Error
--#       / /.navbar-left
--#       .navbar-right
--#         .dropdown.tr-change-dropdown
--#           %i.fa.fa-globe
--#           %a{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#"}
--#             %span.change-text United Kingdom
--#             %i.fa.fa-angle-down
--#           %ul.dropdown-menu.tr-change.tr-list
--#             %li
--#               %a{:href => "#"} United Kingdom
--#             %li
--#               %a{:href => "#"} United States
--#             %li
--#               %a{:href => "#"} China
--#             %li
--#               %a{:href => "#"} Russia
--#         / /.language-dropdown
--#         %ul.sign-in.tr-list
--#           %li
--#             %i.fa.fa-user
--#           %li
--#             %a{:href => "signin.html"}= link_to "Managers", new_manager_session_path
--#           %li
--#             %a{:href => "signup.html"}= link_to "New Candidate", new_candidate_session_path
--#         / /.sign-in
--#         %a.btn.btn-primary{:href => "job-post.html"} Post Job
--#       / /.nav-right
--#     / /.container
--#   / /.navbar
--# / /.tr-header
+%header.tr-header
+  %nav.navbar.navbar-default
+    .container
+      .navbar-header
+        %a.navbar-brand{:href => "index.html"}
+          %img.img-responsive= image_tag("woods_logo.jpg")
+      / /.navbar-header
+      .navbar-right
+        %ul.sign-in.tr-list
+          %li= link_to "About Us |", about_us_path
+          %li= link_to "Contact Us |", contact_us_path
+          %li= link_to "Job Vacancies |", job_vacancies_path
+          %li= link_to "Apply for a Job", new_candidate_session_path
+          %li
+            %i.fa.fa-user
+            = link_to "Manager Area", new_manager_session_path
+        / /.sign-in
+        %a.btn.btn-primary{:href => "job-post.html"} Post Job
+      / /.nav-right
+    / /.container
+  / /.navbar
+/ /.tr-header

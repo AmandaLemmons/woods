@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_action :find_job, only:[:show, :edit, :update, :destroy]
 
-  def index
+  def job_vacancies
     if params[:category].blank?
       @jobs = Job.all.order("created_at DESC")
     else
