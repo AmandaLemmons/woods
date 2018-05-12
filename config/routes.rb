@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   devise_for :managers do
     root to: 'pages#manager_home'
   end
+
+  devise_for :candidates, controllers: {
+    sessions: 'candidates/sessions'
+  }
   resources :jobs
   resources :clients
 end

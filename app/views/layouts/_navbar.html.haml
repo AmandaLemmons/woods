@@ -1,5 +1,7 @@
 - if manager_signed_in?
   =render 'layouts/manager_navbar'
+-elsif candidate_signed_in?
+  =render 'layouts/manager_navbar'
 -else
   %nav.navbar.navbar-expand-lg.navbar-light.bg-light
     %a.navbar-brand{:href => "#"} Navbar
@@ -24,3 +26,4 @@
         %li.nav-item
           %a.nav-link.disabled{:href => "#"} Disabled
         %button.btn.btn-outline-success.my-2.my-sm-0= link_to "Managers", new_manager_session_path
+        %button.btn.btn-outline-success.my-2.my-sm-0= link_to "New Candidate", new_candidate_session_path
