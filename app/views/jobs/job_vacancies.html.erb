@@ -2,33 +2,84 @@
   <div class="container">
     <div class="breadcrumb-info text-center">
       <div class="page-title">
-        <h1>Graphics Designer</h1>
+        <h1>Job Vacancies</h1>
       </div>
-      <ol class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li class="active">Graphics Design</li>
-      </ol>
       <div class="banner-form">
-        <form action="#">
-          <input type="text" class="form-control" placeholder="Job Keyword">
-          <div class="dropdown tr-change-dropdown">
-            <a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text">Location</span><i class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu tr-change">
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Location 1</a></li>
-              <li><a href="#">Location 2</a></li>
-              <li><a href="#">Location 3</a></li>
-            </ul>
-          </div><!-- /.category-change -->
-          <button type="submit" class="btn btn-primary" value="Search">Search</button>
-        </form>
+        <%= simple_form_for('', url: job_vacancies_path, :method => :get, html: { class: 'custom' }, defaults: {required: false}) do |f|%>
+          <%= f.fields_for :search do |search_fields| %>
+          <input type="text" class="form-control" placeholder="Category">
+            <div class="dropdown">
+              <%= search_fields.input :category_id, :label => false, :include_blank => false, collection: Category.all.order(:name)%>
+            </div>
+           <button type="submit" class="btn btn-primary" value="Search"><%= f.button :submit, 'Search', class: 'btn btn-primary' %>
+           </button>
+          <% end %>
+        <% end %>
+
       </div><!-- /.banner-form -->
     </div>
   </div><!-- /.container -->
 </div><!-- tr-breadcrumb -->
 <%= render partial: "jobs/filters" %>
-<%= render partial: "jobs/four_column" %>
-<%= render partial: "jobs/two_column" %>
+ <!-- render partial: "jobs/four_column" %> -->
+<!-- <render partial: "jobs/two_column" %> -->
+
+
+
+<div class="tab-content tr-job-posted">
+  <div>
+    <div class="row">
+    <% @jobs.each do |job| %>
+      <div class="col-sm-6 col-md-3">
+          <div class="job-item">
+            <div class="item-overlay">
+              <div class="job-info">
+                <a href="#" class="btn btn-primary"><%= job.category.name %></a>
+                <span class="tr-title">
+                  <a href="job-details.html"><%= job.title %></a>
+                  <span><a href="#">Dig File</a></span>
+                </span>
+                <ul class="tr-list job-meta">
+                  <li><i class="fa fa-map-signs" aria-hidden="true"></i><%= job.location %></li>
+                  <li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
+                  <li><i class="fa fa-money" aria-hidden="true"></i><%= job.salary %></li>
+                </ul>
+                <ul class="job-social tr-list">
+                  <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+                  <li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-info">
+              <div class="company-logo">
+                <img src="images/job/1.png" alt="images" class="img-responsive">
+              </div>
+              <span class="tr-title">
+                <a href="#"><%= job.title %></a>
+                <span><a href="#">Dig File</a></span>
+              </span>
+              <ul class="tr-list job-meta">
+                <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location %></li>
+                <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+                <li><span><i class="fa fa-money" aria-hidden="true"></i></span>$<%= job.salary %></li>
+              </ul>
+              <div class="time">
+                <a href="#"><span><%= job.category.name %></span></a>
+                <span class="pull-right"><%= time_ago_in_words(job.updated_at) %> ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
     <!-- <div class="tab-content tr-job-posted">

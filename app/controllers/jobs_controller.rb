@@ -3,13 +3,18 @@ class JobsController < ApplicationController
 
   def job_vacancies
     if params[:category].blank?
-      @jobs = Job.all.order("created_at DESC")
+      @jobs = Job.filter_jobs_by_options(filter_options)
+      @job = Job.all
+      params[:search] ||= {}
+
     else
       @category_id = Category.find_by(name: params[:category]).id
       @jobs = Job.where(category_id: @category_id).order("created_at DESC")
     end
     @categories = Category.all
+  end
 
+  def job_details
   end
 
   def show
@@ -54,5 +59,9 @@ class JobsController < ApplicationController
 
   def find_job
     @job = Job.find(params[:id])
+  end
+
+  def filter_options
+    params.permit(search: [:category_id ])
   end
 end
