@@ -16,13 +16,18 @@
                 </span>
                 <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
               </div>
-              <!-- <div>
+              <div>
                 <p> <%= job.description %></p>
-              </div> -->
+              </div>
               <ul class="tr-list job-meta">
                 <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
                 <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.job_level.level%></li>
                 <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.job_salary.salary%></li>
+                <% if current_candidate.nil? %>
+                  <li><%= link_to "Apply", candidate_session_path, class: "btn btn-primary" %> </li>
+                <% else %>
+                  <li><%= link_to "Apply", job_details_path(job.id), class: "btn btn-primary" %> </li>
+                <% end %>
               </ul>
             </div>
           </div>

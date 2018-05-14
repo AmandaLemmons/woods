@@ -19,6 +19,10 @@ class JobsController < ApplicationController
   def job_details
   end
 
+  def google_map(center)
+    "https://maps.googleapis.com/maps/api/staticmap?center=#{center}&size=300x300&zoom=17"
+  end
+
 
   def new
     @job = Job.new
@@ -53,7 +57,7 @@ class JobsController < ApplicationController
   private
 
   def jobs_params
-    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :job_level_id)
+    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :job_level_id, :latitude, :longitude)
   end
 
   def find_job

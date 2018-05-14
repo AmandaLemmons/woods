@@ -2,6 +2,10 @@ class Job < ApplicationRecord
   belongs_to :category
   belongs_to :job_level
   belongs_to :job_salary
+  geocoded_by :location   # can also be an IP address
+  after_validation :geocode          # auto-fetch coordinates
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode  # auto-fetch address
 
   scope :all_by_category_id, ->(category_id) { where(category_id: "%#{category_id}%") }
 
