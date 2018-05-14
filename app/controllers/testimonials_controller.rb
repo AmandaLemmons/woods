@@ -41,11 +41,11 @@ class TestimonialsController < ApplicationController
 
   private
 
-  def testimonals_params
+  def testimonials_params
     params.require(:testimonial).permit(:name, :position, :company, :client_since, :description)
   end
 
   def find_testimonial
-    @testimonail = Testimonial.find(params[:id])
+    @testimonial = Testimonial.find(params[:id])
   end
 end

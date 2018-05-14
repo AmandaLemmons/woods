@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :find_job, only:[:show, :edit, :update, :destroy]
+  before_action :find_job, only:[:job_details, :edit, :update, :destroy]
 
   def job_vacancies
     if params[:category].blank?
@@ -12,12 +12,11 @@ class JobsController < ApplicationController
       @jobs = Job.where(category_id: @category_id).order("created_at DESC")
     end
     @categories = Category.all
+    @salaries = JobSalary.all
+
   end
 
   def job_details
-  end
-
-  def show
   end
 
 
@@ -54,7 +53,7 @@ class JobsController < ApplicationController
   private
 
   def jobs_params
-    params.require(:job).permit(:title, :description, :location, :salary, :vacancy_status, :category_id, :company)
+    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :job_level_id)
   end
 
   def find_job

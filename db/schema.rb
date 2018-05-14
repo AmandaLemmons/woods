@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_12_060024) do
+ActiveRecord::Schema.define(version: 2018_05_14_052802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,18 @@ ActiveRecord::Schema.define(version: 2018_05_12_060024) do
     t.integer "manager_id"
   end
 
+  create_table "job_levels", force: :cascade do |t|
+    t.string "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "job_salaries", force: :cascade do |t|
+    t.string "salary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -98,6 +110,8 @@ ActiveRecord::Schema.define(version: 2018_05_12_060024) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "company"
+    t.integer "job_level_id"
+    t.integer "job_salary_id"
   end
 
   create_table "managers", force: :cascade do |t|

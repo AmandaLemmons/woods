@@ -1,28 +1,34 @@
-<div class="tab-content tr-job-posted">
-  <div role="tabpanel" class="tab-pane fade two-column active in" id="two-column">
-    <div class="row">
-    <% @jobs.each do |job| %>
-      <div class="col-sm-6">
-        <div class="job-item">
-          <div class="job-info">
-            <div class="clearfix">
-              <div class="company-logo">
-                <img src="images/job/1.png" alt="images" class="img-responsive">
+<div class="container">
+  <h2 class = "text-center"> Latest Jobs </h2>
+  <div class="tab-content tr-job-posted">
+    <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
+      <div class="row">
+      <% @jobs.each do |job| %>
+        <div class="col-sm-6">
+          <div class="job-item">
+            <div class="job-info">
+              <div class="clearfix">
+                <!-- <div class="company-logo">
+                  <img src="images/job/1.png" alt="images" class="img-responsive">
+                </div> -->
+                <span class="tr-title">
+                  <%= link_to "#{job.title}", job_details_path(job.id)%> <span><%= job.company%></span>
+                </span>
+                <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
               </div>
-              <span class="tr-title">
-                <a href="job-details.html"><%= link_to "#{job.title}", job_details_path(job.id)%> </a><span><a href="#"><%= job.company%></a></span>
-              </span>
-              <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
+              <!-- <div>
+                <p> <%= job.description %></p>
+              </div> -->
+              <ul class="tr-list job-meta">
+                <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
+                <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.job_level.level%></li>
+                <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.job_salary.salary%></li>
+              </ul>
             </div>
-            <ul class="tr-list job-meta">
-              <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
-              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-              <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.salary%></li>
-            </ul>
           </div>
         </div>
+        <%end%>
       </div>
-      <%end%>
     </div>
   </div>
 </div>

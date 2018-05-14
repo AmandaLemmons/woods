@@ -1,5 +1,8 @@
 class Job < ApplicationRecord
   belongs_to :category
+  belongs_to :job_level
+  belongs_to :job_salary
+
   scope :all_by_category_id, ->(category_id) { where(category_id: "%#{category_id}%") }
 
 
