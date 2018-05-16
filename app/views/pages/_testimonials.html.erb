@@ -9,6 +9,9 @@
       <div class="testimonial-slider">
         <% @testimonials.each do |testi| %>
         <div class="testimonial">
+          <div class="media-left">
+            <%= image_tag ("testimonial.png"), class:"img-responsive"%>
+          </div>
           <div class="media-body">
             <p>"<%= testi.description%>"</p>
             <div class="testimonial-title">
