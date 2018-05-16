@@ -7,7 +7,7 @@
         %li
           %a{:href => "#"}
             %span.icon
-              %img.img-responsive{:alt => "Icon", :src => "assets/images/icons/category1.png"}
+              %img.img-responsive= image_tag ("category1.png")
               %span.category-title= category.name
               %span.category-quantity
               = Job.where(category_id: category.id).count
