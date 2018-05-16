@@ -7,7 +7,7 @@ class Job < ApplicationRecord
   reverse_geocoded_by :latitude, :longitude
   after_validation :reverse_geocode  # auto-fetch address
 
-  scope :all_by_category_id, ->(category_id) { where(category_id: "%#{category_id}%") }
+  scope :all_by_category_id, ->(category_id) { where(category_id: "#{category_id}") }
 
 
   def self.filter_jobs_by_options(jobs_filter_options={})

@@ -1,0 +1,24 @@
+<div class="section-title">
+</div>
+<div class="tr-testimonial">
+  <div class="container">
+    <div class="testimonial-content text-center">
+      <div class="section-title">
+        <h1 class="text-center">Testimonials</h1>
+      </div>
+      <div class="testimonial-slider">
+        <% @testimonials.each do |testi| %>
+        <div class="testimonial">
+          <div class="media-body">
+            <p>"<%= testi.description%>"</p>
+            <div class="testimonial-title">
+              <h2><%= testi.name%></h2>
+              <p><%= testi.position%>, <%= testi.company%></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div><!-- /.container -->
+</div><!-- /.tr-testimonial -->

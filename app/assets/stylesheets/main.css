@@ -1448,11 +1448,11 @@ input:focus, textarea:focus, select:focus,
 /* Tr Testimonial */
 
 .tr-testimonial {
-	background-color: #fff;
+	background-color: white;
 }
 
 .testimonial-content {
-	padding: 140px 0;
+	padding: 100px 0;
 	background-image: url(../images/bg/testimonial-bg.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
@@ -1471,7 +1471,7 @@ input:focus, textarea:focus, select:focus,
 	color: #8f8f8f;
 	font-style: italic;
 	font-size: 24px;
-	max-width: 760px;
+	/* max-width: 760px; */
 	line-height: 30px;
 }
 

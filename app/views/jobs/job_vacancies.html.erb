@@ -1,34 +1,48 @@
 <div class="tr-breadcrumb bg-image section-before">
   <div class="container">
     <div class="breadcrumb-info text-center">
-      <div class="page-title">
+      <div class="page-title banner-content ">
         <h1>Job Vacancies</h1>
       </div>
+
       <div class="banner-form">
-        <%= simple_form_for('', url: job_vacancies_path, :method => :get, html: { class: 'custom' }, defaults: {required: false}) do |f|%>
-          <%= f.fields_for :search do |search_fields| %>
-          <!-- <div class= "col-sm-12">
-            <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="Category">
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <%= simple_form_for('', url: job_vacancies_path, :method => :get, html: { class: 'custom' }, defaults: {required: false}) do |f|%>
+                <%= f.fields_for :search do |search_fields| %>
+              <input type="text" class="form-control" placeholder="Location">
             </div>
-            <div class="col-sm-6">
-               search_fields.input :category_id, :label => false, :include_blank => false, collection: Category.all.order(:name)%>
-            </div>
-          </div> -->
-          <input type="text" class="form-control" placeholder="Category">
+            <div class="col-auto">
+              <%= search_fields.input :category_id, :label => false, :include_blank => true, collection: Category.all.order(:name), class: "form-control "%>
+              <%= f.button :submit, 'Search', class: "btn-primary " %>
 
-            <div class="dropdown">
-              <%= search_fields.input :category_id, :label => false, :include_blank => false, collection: Category.all.order(:name)%>
             </div>
-           <button type="submit" class="btn btn-primary" value="Search"><%= f.button :submit, 'Search', class: 'btn btn-primary' %>
-           </button>
-          <% end %>
-        <% end %>
 
-      </div><!-- /.banner-form -->
+              <% end %>
+            <% end %>
+
+          </div>
+        </form>
+      </div>
+
+
+
+
     </div>
-  </div><!-- /.container -->
-</div><!-- tr-breadcrumb -->
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
  <!-- render partial: "jobs/filters" %> -->
  <!-- render partial: "jobs/four_column" %> -->
 <%= render partial: "jobs/two_column" %>

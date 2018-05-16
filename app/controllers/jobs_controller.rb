@@ -2,15 +2,15 @@ class JobsController < ApplicationController
   before_action :find_job, only:[:job_details, :edit, :update, :destroy]
 
   def job_vacancies
-    if params[:category].blank?
-      @jobs = Job.filter_jobs_by_options(filter_options)
-      @job = Job.all
-      params[:search] ||= {}
 
-    else
-      @category_id = Category.find_by(name: params[:category]).id
-      @jobs = Job.where(category_id: @category_id).order("created_at DESC")
-    end
+    params[:search] ||= {}
+
+      @jobs = Job.filter_jobs_by_options(filter_options).page params[:page]
+
+      @job = Job.all
+
+      # @category_id = Category.find_by(name: params[:category]).id
+      # @jobs = Job.where(category_id: @category_id).order("created_at DESC")
     @categories = Category.all
     @salaries = JobSalary.all
 

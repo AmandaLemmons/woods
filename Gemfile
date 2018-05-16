@@ -16,7 +16,7 @@ gem 'pundit'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'cancancan', '~> 2.0'
-gem "font-awesome-rails"
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem  "pry"
 gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
