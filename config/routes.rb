@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :managers do
-    root to: 'pages#manager_home'
+    root to: 'clients#index'
   end
 
   devise_for :candidates, controllers: {
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'contact-us' => 'pages#contact_us', as: :contact_us
   get 'job-vacancies' => 'jobs#job_vacancies', as: :job_vacancies
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
+  get 'live-clients' => 'clients#live_clients', as: :live_clients
 
 
 end

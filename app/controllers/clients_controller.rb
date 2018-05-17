@@ -3,12 +3,17 @@ class ClientsController < ApplicationController
   before_action :find_client, only:[:show, :edit, :update, :destroy]
 
   def index
-    if params[:category].blank?
-      @clients = Client.where(manager_id: current_manager.id).order("created_at DESC")
-    else
-      @clients = Client.where(manager_id: current_manager.id).where(category_id: @category_id).order("created_at DESC")
-    end
+    params[:search] ||= {}
+
+    @clients = Client.where(manager_id: current_manager.id).filter_clients_by_options(filter_options)
   end
+
+  def live_clients
+    @clients = Client.where(statues: 0)
+  end
+
+
+
 
   def show
   end
@@ -53,5 +58,9 @@ class ClientsController < ApplicationController
 
   def find_client
     @client = Client.find(params[:id])
+  end
+
+  def filter_options
+    params.permit(search: [:statuses ])
   end
 end

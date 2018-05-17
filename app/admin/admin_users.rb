@@ -1,4 +1,6 @@
 ActiveAdmin.register AdminUser do
+  include Accessible
+
   permit_params :email, :password, :password_confirmation
 
   self.send(:include, Kaminari::ConfigurationMethods)

@@ -1,5 +1,21 @@
 .container-fluid
+  %h3
+  Welcome
+  =current_manager.email
   =link_to "+ New Client", new_client_path
+  =link_to "Live Clients", live_clients_path
+
+  %row
+    .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
+      %label.btn.btn-secondary.active
+        =link_to "Live Clients", live_clients_path
+      %label.btn.btn-secondary
+        %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}/
+        Radio
+      %label.btn.btn-secondary
+        %input#option3{:autocomplete => "off", :name => "options", :type => "radio"}/
+        Radio
+
   %table.table.table-striped
     %thead
       %tr
