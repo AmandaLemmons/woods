@@ -3,14 +3,21 @@ class ClientsController < ApplicationController
   before_action :find_client, only:[:show, :edit, :update, :destroy]
 
   def index
-    params[:search] ||= {}
-
-    @clients = Client.where(manager_id: current_manager.id).filter_clients_by_options(filter_options)
+    @clients = Client.where(manager_id: current_manager.id)
   end
 
   def live_clients
-    @clients = Client.where(statues: 0)
+    @clients = Client.where(manager_id: current_manager.id).live_clients
   end
+
+  def dormant_clients
+    @clients = Client.where(manager_id: current_manager.id).dormant_clients
+  end
+
+  def clients
+    @clients = Client.where(manager_id: current_manager.id).clients
+  end
+
 
 
 
@@ -61,6 +68,7 @@ class ClientsController < ApplicationController
   end
 
   def filter_options
-    params.permit(search: [:statuses ])
+    params.permit(search: [:status] )
+
   end
 end

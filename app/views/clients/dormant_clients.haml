@@ -2,18 +2,13 @@
   %h3
   Welcome
   =current_manager.email
+
   %ul.nav.navbar-nav
+    %li
+      %button.btn.btn-default.navbar-btn{:type => "button"}= link_to "All Clients", clients_path
     %li= link_to "+ New Client", new_client_path
     %li=link_to "Live Clients", live_clients_path
     %li=link_to "Dormant Clients", dormant_clients_path
-
-
-
-
-
-
-
-
   %table.table.table-striped
     %thead
       %tr

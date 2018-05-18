@@ -15,13 +15,14 @@
           <%= simple_form_for('', url: clients_path, :method => :get, html: { class: 'custom' }, defaults: {required: false}) do |f|%>
             <%= f.fields_for :search do |search_fields| %>
               <li> Category:
-                <%= search_fields.input :status, :label => false, as: :check_boxes,  collection: Client.statuses%>
+                <%= search_fields.input :live, as: :radio, collection: Client.statuses.keys.map(&:to_sym),  input_html: { value: [params[:search][:statues], params[:search][:statues]] }, required: false, as: :check_boxes %>
               </li>
+
+
         </li>
 
-
         <div class="btn-group filter-btn-group">
-          <%= f.button :submit, 'Filter', class: 'btn btn-md btn-info filter' %>
+          <%= f.button :submit, 'Filter' %>
           <%= link_to 'Clear Filter', clients_path, class: 'btn btn-md btn-default' %>
         </div>
       <% end %>

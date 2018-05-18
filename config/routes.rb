@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'job-vacancies' => 'jobs#job_vacancies', as: :job_vacancies
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
   get 'live-clients' => 'clients#live_clients', as: :live_clients
+  get 'dormant-clients' => 'clients#dormant_clients', as: :dormant_clients
 
 
 end
