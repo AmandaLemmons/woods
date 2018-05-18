@@ -12,9 +12,10 @@ Rails.application.routes.draw do
     root to: 'clients#index'
   end
 
-  devise_for :candidates, controllers: {
-    sessions: 'candidates/sessions'
-  }
+  devise_for :candidates, controllers: { sessions: 'candidates/sessions', registrations: 'candidates/registrations', passwords: 'candidates/passwords'}
+
+
+
   resources :jobs
   resources :clients
   resources :resumes, only: [:index, :new, :create, :destroy]
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
   get 'live-clients' => 'clients#live_clients', as: :live_clients
   get 'dormant-clients' => 'clients#dormant_clients', as: :dormant_clients
+  get 'job-category/:id' => 'jobs#job_category', as: :job_category
 
 
 end

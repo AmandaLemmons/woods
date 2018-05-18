@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 class Candidates::SessionsController < Devise::SessionsController
-  include Accessible
-  skip_before_action :check_candidate, only: :destroy
+  # include Accessible
+
+
+  private
+
+     def after_sign_in_path_for(resource)
+        "/about-us"
+     end
+  # skip_before_action :check_candidate, only: :destroy
 
   # before_action :configure_sign_in_params, only: [:create]
 

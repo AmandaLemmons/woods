@@ -5,7 +5,7 @@
     %ul.category-list.tr-list
       - @categories.each do |category|
         %li
-          %a{:href => "#"}
+          = link_to job_category_path(:id=> category.id) do
             %span.icon
               %img.img-responsive= image_tag ("category1.png")
               %span.category-title= category.name
