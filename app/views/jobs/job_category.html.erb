@@ -1,39 +1,60 @@
 <div class="container">
-  <h2 class = "text-center"> Latest <%= @jobs.first.category.name%> Jobs </h2>
-  <div class="tab-content tr-job-posted">
-    <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
-      <div class="row">
-      <% @jobs.each do |job| %>
-        <div class="col-sm-6">
-          <div class="job-item">
-            <div class="job-info">
-              <div class="clearfix">
-                <!-- <div class="company-logo">
-                  <img src="images/job/1.png" alt="images" class="img-responsive">
-                </div> -->
-                <span class="tr-title">
-                  <%= link_to "#{job.title}", job_details_path(job.id)%> <span><%= job.company%></span>
-                </span>
-                <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
+  <% if @jobs.nil? %>
+    <!-- <h2 class = "text-center"> Latest Jobs </h2> -->
+    <div class="tab-content tr-job-posted">
+      <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <span class="tr-title">
+                    There are not any <%= @category.first.name %> jobs available.
+                  </span>
+                </div>
               </div>
-              <div>
-                <p> <%= job.description %></p>
-              </div>
-              <ul class="tr-list job-meta">
-                <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
-                <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.job_level.level%></li>
-                <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.job_salary.salary%></li>
-                <% if current_candidate.nil? %>
-                  <li><%= link_to "Apply", candidate_session_path, class: "btn btn-primary" %> </li>
-                <% else %>
-                  <li><%= link_to "Apply", job_details_path(job.id), class: "btn btn-primary" %> </li>
-                <% end %>
-              </ul>
             </div>
           </div>
         </div>
-        <%end%>
       </div>
     </div>
-  </div>
+  <% else %>
+    <h2 class = "text-center"> Latest <%= @jobs.first.category.name%> Jobs </h2>
+    <div class="tab-content tr-job-posted">
+      <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
+        <div class="row">
+        <% @jobs.each do |job| %>
+          <div class="col-sm-6">
+            <div class="job-item">
+              <div class="job-info">
+                <div class="clearfix">
+                  <!-- <div class="company-logo">
+                    <img src="images/job/1.png" alt="images" class="img-responsive">
+                  </div> -->
+                  <span class="tr-title">
+                    <%= link_to "#{job.title}", job_details_path(job.id)%> <span><%= job.company%></span>
+                  </span>
+                  <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
+                </div>
+                <div>
+                  <p> <%= job.description %></p>
+                </div>
+                <ul class="tr-list job-meta">
+                  <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
+                  <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.job_level.level%></li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.job_salary.salary%></li>
+                  <% if current_candidate.nil? %>
+                    <li><%= link_to "Apply", candidate_session_path, class: "btn btn-primary" %> </li>
+                  <% else %>
+                    <li><%= link_to "Apply", job_details_path(job.id), class: "btn btn-primary" %> </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

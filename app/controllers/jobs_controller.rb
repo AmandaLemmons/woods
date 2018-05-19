@@ -20,6 +20,8 @@ class JobsController < ApplicationController
     params[:id] ||= {}
 
     @jobs = Job.all_by_category_id(params[:id])
+    @category = Category.where(id: params[:id])
+    
   end
 
   def job_details
