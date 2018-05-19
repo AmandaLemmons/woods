@@ -3,7 +3,12 @@ class Candidate < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  enum gender: {Female: 0, Male: 1 }
+  enum gender: {female: 0, male: 1 }
+  validates :email, :name, :date_of_birth, :category_id, :location, :username, :gender, :phone_number, presence: true
+  validates :email, :username, uniqueness: { case_sensitive: true }
+
+
+
   has_many :job
   has_one :resume
   belongs_to :category

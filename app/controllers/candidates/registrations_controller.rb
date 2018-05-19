@@ -47,9 +47,9 @@ class Candidates::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
-    # devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :date_of_birth, :name, :location, :category_id, :gender, :phone_number])
+  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :date_of_birth, :name, :location, :category_id, :gender, :phone_number])
   # end
-
+  #
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up) do |candidate_params|
   #     candidate_params.permit(:username, :date_of_birth, :name, :location, :category_id, :gender, :phone_number)
