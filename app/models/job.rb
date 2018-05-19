@@ -2,7 +2,7 @@ class Job < ApplicationRecord
   belongs_to :category
   belongs_to :job_level
   belongs_to :job_salary
-  has_many :resumes 
+  has_many :candidates 
   geocoded_by :location   # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
   reverse_geocoded_by :latitude, :longitude

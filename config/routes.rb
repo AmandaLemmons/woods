@@ -13,13 +13,13 @@ Rails.application.routes.draw do
   end
 
   devise_for :candidates, controllers: { sessions: 'candidates/sessions', registrations: 'candidates/registrations', passwords: 'candidates/passwords'}
-  resources :candidates, :only => [:show]
+  resources :candidates, :only => [:show, :edit]
 
 
 
   resources :jobs
   resources :clients
-  resources :resumes, only: [:index, :new, :create, :destroy]
+  resources :resumes
 
 
   get 'about-us' => 'pages#about_us', as: :about_us
