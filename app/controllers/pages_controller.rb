@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+
+
   def home
     @categories = Category.all
     @testimonials = Testimonial.all
@@ -10,7 +12,9 @@ class PagesController < ApplicationController
   def about_us
   end
 
-  
+
+
+
 
 
 end

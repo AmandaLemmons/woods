@@ -7,7 +7,7 @@ class Candidates::SessionsController < Devise::SessionsController
   private
 
      def after_sign_in_path_for(resource)
-        "/about-us"
+        candidate_path(id: current_candidate.id)
      end
   # skip_before_action :check_candidate, only: :destroy
 

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :candidates, controllers: { sessions: 'candidates/sessions', registrations: 'candidates/registrations', passwords: 'candidates/passwords'}
+  resources :candidates, :only => [:show]
 
 
 
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
   get 'live-clients' => 'clients#live_clients', as: :live_clients
   get 'dormant-clients' => 'clients#dormant_clients', as: :dormant_clients
   get 'job-category/:id' => 'jobs#job_category', as: :job_category
+  # get 'profile/:id' => 'candidates#candidate_profile', as: :profile
 
 
 end

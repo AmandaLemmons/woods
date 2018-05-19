@@ -1,17 +1,36 @@
-<div class="container">
-  <h2>Log in</h2>
-
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email, required: false, autofocus: true %>
-      <%= f.input :password, required: false %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div class="tr-breadcrumb bg-image section-before">
+  <div class="container">
+    <div class="breadcrumb-info text-center">
+      <div class="page-title">
+        <h1>Sign In</h1>
+        <span>Lorem Ipsum is simply dummy text of the printing pesetting.</span>
+      </div>
     </div>
+  </div><!-- /.container -->
+</div><!-- tr-breadcrumb -->
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+<div class="tr-account section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="user-account">
+          <div class="account-content">
+            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="form-inputs">
+                <%= f.input :email, required: false, autofocus: true, placeholder:"Please Enter Your Email" %>
+                <%= f.input :password, required: false, placeholder:"Password" %>
+                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Log in", class:"btn btn-primary" %>
+              </div>
+            <% end %>
+
+            <%= render "candidates/shared/links" %>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <%= render "candidates/shared/links" %>
+  </div>
 </div>
