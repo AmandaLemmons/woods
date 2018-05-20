@@ -9,16 +9,18 @@
         .navbar-header
           %a.navbar-brand{:href => "/"}
             %img.img-responsive= image_tag("woods_logo.jpg")
-        / /.navbar-header
+        .navbar-left
+          %ul.sign-in.tr-list
+
         .navbar-right
           %ul.sign-in.tr-list
-            %li= link_to "About Us  |", about_us_path
-            %li= link_to "Contact Us  |", contact_us_path
-            %li= link_to "Job Vacancies  |", job_vacancies_path
-            %li= link_to "Apply for a Job  |", new_candidate_session_path
-            %li= link_to "Sign In", new_candidate_session_path
-            %li
-            %li= link_to "Manager Area", new_manager_session_path
+            %li.padding-nav= link_to "ABOUT US", about_us_path
+            %li.padding-nav= link_to "CONTACT US", contact_us_path
+            %li.padding-nav= link_to "JOB VACANCIES", job_vacancies_path
+            %li.padding-nav
+              %i.fa.fa-user
+            %li= link_to "SIGN IN", new_candidate_session_path
+            %li.padding-nav= link_to "MANAGER AREA", new_manager_session_path
 
 
 

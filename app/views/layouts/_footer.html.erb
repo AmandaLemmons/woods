@@ -1,0 +1,64 @@
+<div class="footer">
+  <div class="footer-top section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <h3>About Us</h3>
+            <ul class="tr-list">
+              <li><%= link_to "About Us", about_us_path %></li>
+              <li><%= link_to "Contact Us", contact_us_path %></li>
+              <li><%= link_to "Job Vacancies", job_vacancies_path %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <h3>Job Seekers</h3>
+            <ul class="tr-list">
+              <li><%= link_to "Create Account", new_candidate_registration_path %></li>
+              <li><%= link_to "Sign In", new_candidate_session_path %></li>
+              <li><%= link_to "Upload CV", new_candidate_session_path %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <h3>Managers</h3>
+            <ul class="tr-list">
+              <li><%= link_to "Sign In", new_manager_session_path %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <h3>Newsletter</h3>
+            <p>Enter your email to be informed on the latest job offers at Woods Recruitment.</p>
+            <form class="contact-form" method="post" action="#">
+              <div class="form-group">
+                  <input type="email" class="form-control" required="required" placeholder="Your email Id">
+              </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.footer-top -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright">
+        <p>Copyright © 2017 <a href="#">WoodsRecruitment.co.uk</a> All rights reserved.</p>
+      </div>
+      <div class="footer-social pull-right">
+        <ul class="tr-list">
+          <li><a href="https://www.facebook.com/Woods-Recruitment-Ltd-1698043663799656/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/Woodsrec" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div><!-- /.footer-bottom -->
+</div><!-- /.footer -->

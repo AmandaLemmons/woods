@@ -34,11 +34,13 @@
 
   <body>
     <%= stylesheet_link_tag 'application', :media => "all" %>
-
     <%= render partial: "layouts/navbar"%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render partial:'layouts/messages' %>
+
+
     <%= yield %>
+    <%= render partial: "layouts/footer" %>
+
 
   </body>
 </html>
