@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  get 'contact/new'
   get 'resumes/index'
   get 'resumes/new'
   get 'resumes/create'
   get 'resumes/destroy'
   root 'pages#home'
+  resources :jobs
+  resources :clients
+  resources :resumes
+  resources :contacts, only: [:new, :create]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -16,14 +21,8 @@ Rails.application.routes.draw do
   resources :candidates, :only => [:show, :edit]
 
 
-
-  resources :jobs
-  resources :clients
-  resources :resumes
-
-
   get 'about-us' => 'pages#about_us', as: :about_us
-  get 'contact-us' => 'pages#contact_us', as: :contact_us
+  get 'contact-us' => 'contact#contact_us', as: :contact_us
   get 'job-vacancies' => 'jobs#job_vacancies', as: :job_vacancies
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
   get 'live-clients' => 'clients#live_clients', as: :live_clients

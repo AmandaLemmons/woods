@@ -20,6 +20,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem  "pry"
 gem 'geocoder'
 gem 'carrierwave', '~> 1.0'
+gem 'mail_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

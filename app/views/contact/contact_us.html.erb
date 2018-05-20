@@ -1,0 +1,65 @@
+	<div class="tr-breadcrumb bg-image section-before">
+		<div class="container">
+			<div class="breadcrumb-info text-center">
+				<div class="page-title">
+					<h1>Contact Us</h1>
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.tr-breadcrumb -->
+
+	<div class="page-content">
+		<div class="container">
+			<div class="tr-map">
+				<div id="map"></div>
+			</div><!-- /.tr-map -->
+			<br>
+			<div class="contact-section">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="section">
+							<span class="tr-title">Contact Info</span>
+							<p>Please get in contact with us to discuss future partnerships.</p>
+							<%= render partial: "contact/form" %>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="section">
+							<span class="tr-title">Contact Info</span>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<ul class="tr-list info-list">
+								<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><span>Redhill House,<br>41 Hope St,</span> Chester,<br> CH4 8BU</span></li>
+								<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><span>T: 01244 345560</span> F: 01244 470400</span></li>
+								<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><span><a href="#">info@woodsrecruitment.co.uk</a></span></span></li>
+							</ul>
+							<span class="tr-title">Social Network</span>
+							<div class="social">
+								<ul class="tr-list">
+									<li><a href="https://www.facebook.com/Woods-Recruitment-Ltd-1698043663799656/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/Woodsrec" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.page-content -->
+
+
+	<script>
+	      function initMap() {
+	        var uluru = {lat: 53.1787623, lng: -2.9182475};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 14,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+	      }
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-Vm5ftG314QwOZpU_-GEBHeXdlx8aslw&callback=initMap">
+	    </script>
