@@ -1,0 +1,20 @@
+<div class="banner-form">
+  <form>
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <%= simple_form_for('', url: job_vacancies_path, :method => :get, html: { class: 'custom' }, defaults: {required: false}) do |f|%>
+          <%= f.fields_for :search do |search_fields| %>
+        <input type="text" class="form-control" placeholder="Location">
+      </div>
+      <div class="col-auto">
+        <%= search_fields.input :category_id, :label => false, :include_blank => true, collection: Category.all.order(:name), class: "form-control "%>
+        <%= f.button :submit, 'Search', class: "btn-primary " %>
+
+      </div>
+
+        <% end %>
+      <% end %>
+
+    </div>
+  </form>
+</div>
