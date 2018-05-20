@@ -4,8 +4,6 @@ class ResumesController < ApplicationController
   before_action :find_candidates_resumes, only:[:new, :edit]
 
 
-
-
   def index
     @resumes = Resume.where(candidate_id: current_candidate.id)
 
@@ -14,6 +12,11 @@ class ResumesController < ApplicationController
   def new
      @resume = Resume.new
   end
+
+  def apply
+    @resume = Resume.new(job_id: params[:id], candidate_id: current_candidate.id)
+  end
+
 
   def create
      @resume = Resume.new(resume_params)
@@ -24,7 +27,6 @@ class ResumesController < ApplicationController
      else
         render "new"
      end
-
   end
 
   def edit

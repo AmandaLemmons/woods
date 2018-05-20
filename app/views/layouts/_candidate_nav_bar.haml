@@ -4,26 +4,20 @@
       .navbar-header
         %a.navbar-brand{:href => "/"}
           %img.img-responsive= image_tag("woods_logo.jpg")
-      / /.navbar-header
+      .navbar-left
+        %ul.sign-in.tr-list
+
       .navbar-right
         %ul.sign-in.tr-list
-          %li= link_to "About Us |", about_us_path
-          %li= link_to "Contact Us |", contact_us_path
-          %li= link_to "Job Vacancies |", job_vacancies_path
-          %li= link_to "Profile |", candidate_path(id: current_candidate.id)
-
-          %li= link_to "Edit Profile |", edit_candidate_registration_path(id: current_candidate.id)
-
-          %li
+          %li.padding-nav= link_to "ABOUT US", about_us_path
+          %li.padding-nav= link_to "CONTACT US", contact_us_path
+          %li.padding-nav= link_to "JOB VACANCIES", job_vacancies_path
+          %li.padding-nav
+            %i.fa.fa-user
+          %li= link_to "PROFILE", candidate_path(id: current_candidate.id)
+          %li.padding-nav= link_to "EDIT PROFILE", edit_candidate_registration_path(id: current_candidate.id)
+          %li.padding-nav
             -if current_candidate.present?
               = link_to "Sign Out", destroy_candidate_session_path,:method => :delete
             -else
               = link_to "Sign In", new_candidate_session_path
-
-
-        / /.sign-in
-        -# %a.btn.btn-primary{:href => "job-post.html"} Post Job
-      / /.nav-right
-    / /.container
-  / /.navbar
-/ /.tr-header

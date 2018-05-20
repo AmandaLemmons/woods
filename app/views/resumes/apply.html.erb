@@ -1,0 +1,32 @@
+<% if !@resume.errors.empty? %>
+   <div class = "alert alert-error">
+
+      <ul>
+         <% @resume.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+
+   </div>
+<% end %>
+<div class="tr-account section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="user-account">
+          <div class="account-content">
+             <%= simple_form_for(@resume, html: { multipart: true }) do |f| %>
+                <%= f.input :name, placeholder:"Surname, First Name CV" %>
+                <%= f.file_field :attachment %>
+                <%= f.input :candidate_id, as: :hidden, :value => { :candidate_id => current_candidate.id }%>
+                <%=  f.input :job_id, as: :hidden, :value => { :job_id => params[:id] } %>
+                <%= f.button :submit, class: "btn btn-primary", :locals => {:job_id => params[:id], :category_id => params[:category_id] }%>
+                <% binding.pry %>
+
+             <% end %>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>

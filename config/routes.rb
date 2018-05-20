@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get 'dormant-clients' => 'clients#dormant_clients', as: :dormant_clients
   get 'job-category/:id' => 'jobs#job_category', as: :job_category
   # get 'profile/:id' => 'candidates#candidate_profile', as: :profile
+  get 'apply/:id' => 'resumes#apply', as: :apply_for_job
+
 
 
 end

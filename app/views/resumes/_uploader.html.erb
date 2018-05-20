@@ -18,9 +18,9 @@
              <%= simple_form_for(@resume, html: { multipart: true }) do |f| %>
                 <%= f.input :name, placeholder:"Surname, First Name CV" %>
                 <%= f.file_field :attachment %>
-                <%= f.input :candidate_id, as: :hidden, :input_html => { :candidate_id => current_candidate.id }%>
-                <!-- < f.input :job_id %> -->
-                <%= f.button :submit, class: "btn btn-primary" %>
+                <%= f.input :candidate_id, as: :hidden, :value => { :candidate_id => current_candidate.id }%>
+                 <!-- f.input :job_id, as: :hidden, :input_html => { :job_id => params[:id] } %> -->
+                <%= f.button :submit, class: "btn btn-primary", :locals => {:job_id => params[:id], :category_id => params[:category_id] }%>
              <% end %>
            </div>
          </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_082734) do
+ActiveRecord::Schema.define(version: 2018_05_20_145925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2018_05_19_082734) do
     t.inet "last_sign_in_ip"
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "applicants", force: :cascade do |t|
+    t.integer "job_id"
+    t.integer "candidate_id"
+    t.integer "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "candidates", force: :cascade do |t|
@@ -142,6 +150,7 @@ ActiveRecord::Schema.define(version: 2018_05_19_082734) do
     t.bigint "candidate_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "job_id"
     t.index ["candidate_id"], name: "index_resumes_on_candidate_id"
   end
 

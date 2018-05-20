@@ -4,22 +4,14 @@
       .navbar-header
         %a.navbar-brand{:href => "/"}
           %img.img-responsive= image_tag("woods_logo.jpg")
-      / /.navbar-header
+      .navbar-left
+        %ul.sign-in.tr-list
+
       .navbar-right
         %ul.sign-in.tr-list
-          %li= link_to "+ New Client | ", new_client_path
-          %li=link_to "Live Clients | ", live_clients_path
-          %li=link_to "Dormant Clients | ", dormant_clients_path
+          %li.padding-nav= link_to "+ New Client", new_client_path
+          %li.padding-nav= link_to "Live Clients", live_clients_path
+          %li.padding-nav= link_to "Dormant Clients", dormant_clients_path
+          %li.padding-nav
+            %i.fa.fa-user
           %li= link_to "Sign Out", destroy_manager_session_path,:method => :delete
-
-
-        -# = link_to "New Client", new_client_path
-
-
-
-        / /.sign-in
-        -# %a.btn.btn-primary{:href => "job-post.html"} Post Job
-      / /.nav-right
-    / /.container
-  / /.navbar
-/ /.tr-header
