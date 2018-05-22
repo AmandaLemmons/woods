@@ -3,7 +3,6 @@
   = f.input :title, label: "Job Title"
   = f.input :description, label: "Job Description"
   = f.collection_select :job_salary_id, JobSalary.all, :id, :salary, {prompt: "Choose a salary"}
-  = f.collection_select :job_location_id, JobLocation.all, :id, :name, {prompt: "Choose a location"}
 
   = f.input :company, label: "Company"
 
