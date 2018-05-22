@@ -19,7 +19,7 @@ gem 'kaminari'
 gem 'cancancan', '~> 2.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem  "pry"
-gem 'geocoder'
+# gem 'geocoder'
 gem 'carrierwave', '~> 1.0'
 gem 'mail_form'
 
