@@ -10,6 +10,6 @@ class Candidate < ApplicationRecord
 
 
   has_many :job
-  has_one :resume
+  has_many :resumes
   belongs_to :category
 end
