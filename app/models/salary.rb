@@ -1,4 +1,4 @@
-class JobSalary < ApplicationRecord
+class Salary < ApplicationRecord
   has_many :jobs
 
   def display_name

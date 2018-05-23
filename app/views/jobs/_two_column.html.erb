@@ -37,7 +37,7 @@
                   <% end %>
                   <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
                   <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.experience_level.try(:level)%></li>
-                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.job_salary.try(:salary)%></li>
+                  <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.salary.try(:salary)%></li>
                 </ul>
               </div>
             </div>

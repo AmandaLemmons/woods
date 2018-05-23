@@ -1,7 +1,7 @@
 class Job < ApplicationRecord
   belongs_to :category
   belongs_to :experience_level
-  belongs_to :job_salary
+  belongs_to :salary
   has_many :resumes
 
   # geocoded_by :location   # can also be an IP address

@@ -12,7 +12,7 @@ class JobsController < ApplicationController
       # @category_id = Category.find_by(name: params[:category]).id
       # @jobs = Job.where(category_id: @category_id).order("created_at DESC")
     @categories = Category.all
-    @salaries = JobSalary.all
+    @salaries = Salary.all
 
   end
 
@@ -65,7 +65,7 @@ class JobsController < ApplicationController
   private
 
   def jobs_params
-    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :experience_level_id, :latitude, :longitude)
+    params.require(:job).permit(:title, :description, :location, :salary_id, :vacancy_status, :category_id, :company, :experience_level_id, :latitude, :longitude)
   end
 
   def find_job

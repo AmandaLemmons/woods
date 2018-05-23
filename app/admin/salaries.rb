@@ -1,10 +1,8 @@
-ActiveAdmin.register JobSalary do
-
-  
+ActiveAdmin.register Salary do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :salary
+permit_params :salary 
 #
 # or
 #

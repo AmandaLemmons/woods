@@ -1,8 +1,8 @@
-class JobSalariesController < ApplicationController
+class SalariesController < ApplicationController
   before_action :find_job_salary, only:[:show, :edit, :update, :destroy]
 
   def index
-    @job_salaries = JobSalary.all.order("created_at DESC")
+    @job_salaries = Salary.all.order("created_at DESC")
   end
 
   def show
@@ -10,13 +10,13 @@ class JobSalariesController < ApplicationController
 
 
   def new
-    @job_salaries = JobSalary.new
+    @job_salaries = Salary.new
   end
 
   def create
-    @job_salaries = JobSalary.new(job_salaries_params)
+    @job_salaries = Salary.new(salaries_params)
 
-    if @JobSalary.save
+    if @job_salaries.save
       redirect_to @job_salaries
     else
       render "New"
@@ -27,7 +27,7 @@ class JobSalariesController < ApplicationController
   end
 
   def update
-    if @JobSalary.update(job_salaries_params)
+    if @job_salaries.update(salaries_params)
       redirect_to @job_salaries
     else
       render "Edit"
@@ -35,18 +35,18 @@ class JobSalariesController < ApplicationController
   end
 
   def destroy
-    @JobSalary.destroy
+    @job_salaries.destroy
     redirect_to root_path
   end
 
   private
 
-  def job_salaries_params
-    params.require(:job_salary).permit(:salary)
+  def salaries_params
+    params.require(:salary).permit(:salary)
   end
 
   def find_testimonial
-    @job_salary = JobSalary.find(params[:id])
+    @job_salary = Salary.find(params[:id])
   end
 
 end

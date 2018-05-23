@@ -2,7 +2,7 @@
   = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}
   = f.input :title, label: "Job Title"
   = f.input :description, label: "Job Description"
-  = f.collection_select :job_salary_id, JobSalary.all, :id, :salary, {prompt: "Choose a salary"}
+  = f.collection_select :salary_id, Salary.all, :id, :salary, {prompt: "Choose a salary"}
 
   = f.input :company, label: "Company"
 
