@@ -8,6 +8,8 @@ class ClientsController < ApplicationController
 
   def live_clients
     @clients = Client.where(manager_id: current_manager.id).live_clients
+    @client = Client.new
+
   end
 
   def dormant_clients

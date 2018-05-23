@@ -3,6 +3,8 @@
     %li
       %button.btn.btn-default.navbar-btn{:type => "button"}= link_to "All Clients", clients_path
     %li= link_to "+ New Client", new_client_path
+    %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"}
+      Launch demo modal
     %li=link_to "Live Clients", live_clients_path
     %li=link_to "Dormant Clients", dormant_clients_path
   %table.table.table-striped
@@ -29,3 +31,17 @@
         %td #{client.other}
         %td #{client.status}
         %td= link_to "Edit", edit_client_path(client)
+
+/ Modal
+#exampleModalCenter.modal.fade.bd-example-modal-lg{"aria-hidden" => "true", "aria-labelledby" => "exampleModalCenterTitle", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-dialog-centered.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLongTitle.modal-title New Client
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        = render 'form'
+      .modal-footer
+        %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+        %button.btn.btn-primary{:type => "button"} Save changes
