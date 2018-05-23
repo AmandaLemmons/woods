@@ -3159,7 +3159,7 @@ input:focus, textarea:focus, select:focus,
 
 .contact-section .info-list li {
 	margin-bottom: 20px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 
 .contact-section .info-list li:last-child {
@@ -3176,7 +3176,13 @@ input:focus, textarea:focus, select:focus,
 .info-list .media-body span {
 	display: block;
 	margin-bottom: 5px;
+	margin-left: 15px;
 }
+ span #extra-indent{
+
+	margin-left: 30px;
+}
+
 
 .info-list .media-body a {
 	color: #7b7b7b;

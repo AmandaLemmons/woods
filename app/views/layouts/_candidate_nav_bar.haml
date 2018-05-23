@@ -4,22 +4,24 @@
   %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarNav.collapse.navbar-collapse
-    .navbar-left
-      %ul.navbar-nav
-        %li.nav-item.active
-          .nav-link= link_to "Home", root_path
-          %span.sr-only (current)
-        %li.nav-item.nav-link= link_to "About Us", about_us_path
-        %li.nav-item.nav-link= link_to "Contact Us", contact_us_path
-        %li.nav-item.nav-link= link_to "Job Vacancies", job_vacancies_path
-    .navbar-right
-      %ul.navbar-nav
+    %ul.navbar-nav
+      %li.nav-item.active
+        .nav-link= link_to "Home", root_path
+        %span.sr-only (current)
+      %li.nav-item.nav-link= link_to "About Us", about_us_path
+      %li.nav-item.nav-link= link_to "Contact Us", contact_us_path
+      %li.nav-item.nav-link= link_to "Job Vacancies", job_vacancies_path
+    %ul.navbar-nav
+      .dropdown-menu.dropdown-menu-right.dropdown-default{"aria-labelledby" => "navbarDropdownMenuLink"}
+        %a.dropdown-item.waves-effect.waves-light{:href => "#"} Action
+        %a.dropdown-item.waves-effect.waves-light{:href => "#"} Another action
+        %a.dropdown-item.waves-effect.waves-light{:href => "#"} Something else here
         %li.nav-item.nav-link.i.fa.fa-user= link_to "Profile", candidate_path(id: current_candidate.id)
         %li.nav-item.nav-link
           -if current_candidate.present?
             = link_to "Sign Out", destroy_candidate_session_path,:method => :delete
           -else
-            = link_to "Sign In", new_candidate_session_pat
+          = link_to "Sign In", new_candidate_session_path
 
 -# %header.tr-header
 -#   %nav.navbar.navbar-default
