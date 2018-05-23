@@ -9,7 +9,10 @@
 
       .navbar-right
         %ul.sign-in.tr-list
-          %li.padding-nav= link_to "+ New Client", new_client_path
+          -# %li.padding-nav= link_to "+ New Client", new_client_path
+          %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"} + New Client
+          = render "clients/modal"
+
           %li.padding-nav= link_to "Live Clients", live_clients_path
           %li.padding-nav= link_to "Dormant Clients", dormant_clients_path
           %li.padding-nav

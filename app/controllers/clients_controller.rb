@@ -14,10 +14,14 @@ class ClientsController < ApplicationController
 
   def dormant_clients
     @clients = Client.where(manager_id: current_manager.id).dormant_clients
+    @client = Client.new
+
   end
 
   def clients
     @clients = Client.where(manager_id: current_manager.id).clients
+    @client = Client.new
+
   end
 
 
