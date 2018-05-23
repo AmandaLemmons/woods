@@ -1,4 +1,4 @@
-class JobLevel < ApplicationRecord
+class ExperienceLevel < ApplicationRecord
   has_many :jobs
 
   def display_name

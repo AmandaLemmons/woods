@@ -21,7 +21,7 @@ class JobsController < ApplicationController
 
     @jobs = Job.all_by_category_id(params[:id])
     @category = Category.where(id: params[:id])
-    
+
   end
 
   def job_details
@@ -65,7 +65,7 @@ class JobsController < ApplicationController
   private
 
   def jobs_params
-    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :job_level_id, :latitude, :longitude)
+    params.require(:job).permit(:title, :description, :location, :job_salary_id, :vacancy_status, :category_id, :company, :experience_level_id, :latitude, :longitude)
   end
 
   def find_job

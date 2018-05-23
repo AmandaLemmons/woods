@@ -1,6 +1,6 @@
 class Job < ApplicationRecord
   belongs_to :category
-  belongs_to :job_level
+  belongs_to :experience_level
   belongs_to :job_salary
   has_many :resumes
 

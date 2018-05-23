@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_193446) do
+ActiveRecord::Schema.define(version: 2018_05_22_195644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2018_05_22_193446) do
     t.integer "manager_id"
   end
 
-  create_table "job_levels", force: :cascade do |t|
+  create_table "experience_levels", force: :cascade do |t|
     t.string "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 2018_05_22_193446) do
     t.integer "job_salary_id"
     t.float "latitude"
     t.float "longitude"
+    t.integer "experience_level_id"
   end
 
   create_table "managers", force: :cascade do |t|
