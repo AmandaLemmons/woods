@@ -1,0 +1,57 @@
+- if manager_signed_in?
+  =render partial: "layouts/manager_navbar"
+- elsif candidate_signed_in?
+  =render partial: "layouts/candidate_nav_bar"
+-else
+  %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    %a.navbar-brand{:href => "#"}
+      %img.img-responsive= image_tag("woods_logo.jpg")
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarText.collapse.navbar-collapse
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.nav-link= link_to "ABOUT US", about_us_path
+        %li.nav-item.nav-link= link_to "CONTACT US", contact_us_path
+        %li.nav-item.nav-link= link_to "JOB VACANCIES", job_vacancies_path
+      %span.navbar-text
+        %ul
+          %li.i.fa.fa-user
+          %li= link_to "SIGN IN", new_candidate_session_path
+          %li.padding-nav= link_to "MANAGER AREA", new_manager_session_path
+
+
+
+-# - if manager_signed_in?
+-#   =render partial: "layouts/manager_navbar"
+-# - elsif candidate_signed_in?
+-#   =render partial: "layouts/candidate_nav_bar"
+-# -else
+-#   %header.tr-header
+-#     %nav.navbar.navbar-default
+-#       .container
+-#         .navbar-header
+-#           %a.navbar-brand{:href => "/"}
+-#             %img.img-responsive= image_tag("woods_logo.jpg")
+-#           %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+-#             %span.navbar-toggler-icon
+-#         #navbarSupportedContent.collapse.navbar-collapse
+-#           .navbar-left
+-#             %ul.sign-in.tr-list
+-#
+-#           .navbar-right
+-#             %ul.sign-in.tr-list
+-#               %li.padding-nav= link_to "ABOUT US", about_us_path
+-#               %li.padding-nav= link_to "CONTACT US", contact_us_path
+-#               %li.padding-nav= link_to "JOB VACANCIES", job_vacancies_path
+-#               %li.padding-nav
+-#                 %i.fa.fa-user
+-#               %li= link_to "SIGN IN", new_candidate_session_path
+-#               %li.padding-nav= link_to "MANAGER AREA", new_manager_session_path
+
+
+        / /.sign-in
+        -# %a.btn.btn-primary{:href => "job-post.html"} Post Job
+      / /.nav-right
+    / /.container
+  / /.navbar
+/ /.tr-header
