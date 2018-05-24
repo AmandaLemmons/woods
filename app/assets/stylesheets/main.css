@@ -132,6 +132,25 @@ input:focus, textarea:focus, select:focus,
 	text-transform: uppercase;
 	background-color: #008def;
 	border-color: #008def;
+
+}
+.btn.btn-grey {
+	padding: 8px 20px 5px;
+	text-transform: uppercase;
+	background-color: #7b7b7b;
+	border-color: #f5f4f5;
+	color: white;
+}
+
+.btn.btn-white {
+	padding: 8px 20px 5px;
+	text-transform: uppercase;
+	background-color: #f5f4f5;
+	border-color: #7b7b7b;
+	color: #212529;
+}
+.btn.btn-white:hover {
+	background-color: #f5f4f5;
 }
 
 .btn i {
@@ -168,10 +187,7 @@ input:focus, textarea:focus, select:focus,
 }
 
 .btn:hover {
-	/* color: #008def; */
-	/* color: #336600; */
-
-
+	color: #7b7b7b;
 }
 
 .btn:focus {
@@ -325,7 +341,7 @@ input:focus, textarea:focus, select:focus,
 }
 
 .user-image {
-	border: 8px solid #fff;
+	/* border: 8px solid #fff; */
 }
 
 .tr-breadcrumb .job-meta li {
@@ -1055,6 +1071,10 @@ input:focus, textarea:focus, select:focus,
 	color: #505050;
 }
 
+.category-list .category-title:hover {
+	color: #336600;
+}
+
 .category-list .icon {
 	margin-bottom: 5px;
 	min-height: 40px;
@@ -1094,7 +1114,15 @@ input:focus, textarea:focus, select:focus,
 	margin: 5px 0 0 120px;
 }
 
+/* Resume Banner*/
 
+#resume_btn{
+	padding: 8px 20px 5px;
+	text-transform: uppercase;
+	background-color: #7b7b7b;
+	border-color: #f5f4f5;
+	color: white;
+}
 /* Tr Job Post */
 
 .job-item {

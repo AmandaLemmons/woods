@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="breadcrumb-info text-center">
 			<div class="user-image">
-				<img src="images/others/author.png" alt="Image" class="img-responsive">
+				<!-- <img src="images/others/author.png" alt="Image" class="img-responsive"> -->
 			</div>
   			<div class="user-title">
   				<h1><%= current_candidate.name %></h1>
@@ -19,9 +19,9 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-4">
-          <%= link_to "Add Resume", new_resume_path, class: "btn btn-primary" %>
+          <%= link_to "Add Resume", new_resume_path, class: "btn btn-grey" %>
 
-          <%= link_to "View Resume", resumes_index_path %>
+          <%= link_to "View Resume", resumes_index_path, class: "btn btn-white"%>
         </div>
       </div>
 		</div>

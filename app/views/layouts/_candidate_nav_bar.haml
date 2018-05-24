@@ -5,9 +5,9 @@
         %li.nav-item.active
           %a.nav-link{:href => "/"}Home
         %li.nav-item
-          %a.nav-link{:href => "/job-vacancies"} About Us
+          %a.nav-link{:href => "/about-us"} About Us
         %li.nav-item
-          %a.nav-link{:href => "/job-vacancies"} Contact Us
+          %a.nav-link{:href => "/contact-us"} Contact Us
         %li.nav-item
           %a.nav-link{:href => "/job-vacancies"} Job Vacancies
     .mx-auto.order-0
@@ -21,10 +21,9 @@
           %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             .i.fa.fa-user
           .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-            %a.dropdown-item{:href => "/candidates/#{current_candidate.id} "} Edit Profile
+            %a.dropdown-item{:href => "/candidates/#{current_candidate.id} "} Profile
             -if current_candidate.present?
               %a.dropdown-item=link_to "Sign Out", destroy_candidate_session_path,:method => :delete
             -else
               %a.dropdown-item
                 %nav-link#signout=link_to "Sign In", new_candidate_session_path
-            %a.dropdown-item{:href => "/candidates/#{current_candidate.id} "} Profile
