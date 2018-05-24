@@ -78,12 +78,12 @@ input:focus {
 	text-decoration:none;
 	outline: none;
 	/* color:#008def; */
-		color:#336600;
+		/* color:#336600; */
 }
 
 a:hover {
 	/* color:#008def; */
-	color: #336600;
+	/* color: #336600; */
 }
 
 a:active,
@@ -148,7 +148,7 @@ input:focus, textarea:focus, select:focus,
 
 .btn.button-send:hover {
 	/* color: #8322cb; */
-	color: #336600;
+	/* color: #336600; */
 
 }
 
@@ -169,7 +169,7 @@ input:focus, textarea:focus, select:focus,
 
 .btn:hover {
 	/* color: #008def; */
-	color: #336600;
+	/* color: #336600; */
 
 
 }
