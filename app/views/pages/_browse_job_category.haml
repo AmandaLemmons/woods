@@ -7,7 +7,25 @@
         %li
           = link_to job_category_path(:id=> category.id) do
             %span.icon
-              %img.img-responsive= image_tag ("category1.png")
+              - if category.name == "Engineering"
+                %img.img-responsive= image_tag ("007-artificial-intelligence.png")
+              - elsif category.name == "Manufacturing"
+                %img.img-responsive= image_tag ("002-factory-1.png")
+              - elsif category.name == "Commercial"
+                %img.img-responsive= image_tag ("001-conveyor.png")
+              - elsif category.name == "Industrial"
+                %img.img-responsive= image_tag ("003-industry.png")
+              - elsif category.name == "Construction"
+                %img.img-responsive= image_tag ("008-engineer.png")
+              - elsif category.name == "Commercial Department"
+                %img.img-responsive= image_tag ("006-company.png")
+              - elsif category.name == "Permanent"
+                %img.img-responsive= image_tag ("009-handshake.png")
+              - elsif category.name == "Temporary"
+                %img.img-responsive= image_tag ("010-businessman.png")
+              - else
+                %img.img-responsive= image_tag ("001-conveyor.png")
+
               %span.category-title= category.name
               %span.category-quantity
               = Job.where(category_id: category.id).count
