@@ -3,6 +3,7 @@ class ClientsController < ApplicationController
   before_action :find_client, only:[:show, :edit, :update, :destroy]
 
   def index
+    @client = Client.new
     @clients = Client.where(manager_id: current_manager.id)
   end
 
@@ -29,6 +30,8 @@ class ClientsController < ApplicationController
 
 
   def show
+    @client = Client.new
+
   end
 
 

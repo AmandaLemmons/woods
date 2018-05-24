@@ -1,17 +1,12 @@
-//= require jquery3
 //= require popper
+//= require bootstrap
+
 //= require bootstrap-sprockets
 //= require jquery
 //= require jquery_ujs
-//= require jquery.min
-//= require bootstrap.min
-//= require inview.min
-//= require counterup.min
-//= require waypoints.min
-//= require slick.min
-//= require jquery-te.min
-//= require gmaps.min
+
 //= require main
+
 
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
@@ -29,3 +24,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+//  require jquery.min
+//  require bootstrap.min
+//  require inview.min
+//  require counterup.min
+//  require waypoints.min
+//  require slick.min
+//  require jquery-te.min
+//  require gmaps.min

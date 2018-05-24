@@ -1,20 +1,22 @@
-%header.tr-header
-  %nav.navbar.navbar-default
-    .container
-      .navbar-header
-        %a.navbar-brand{:href => "/"}
-          %img.img-responsive= image_tag("woods_logo.jpg")
-      .navbar-left
-        %ul.sign-in.tr-list
+%nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+  .container
+    .navbar-collapse.collapse.w-100.order-1.order-md-0.dual-collapse2
+      %ul.navbar-nav.mr-auto
+        %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"} + New Client
+        = render "clients/modal"
 
-      .navbar-right
-        %ul.sign-in.tr-list
-          -# %li.padding-nav= link_to "+ New Client", new_client_path
-          %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"} + New Client
-          = render "clients/modal"
+    .mx-auto.order-0
+      %a.navbar-brand.mx-auto{:href => "/"}
+        %img.img-responsive= image_tag("woods_logo.jpg")
+      %button.navbar-toggler{"data-target" => ".dual-collapse2", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+    .navbar-collapse.collapse.w-100.order-3.dual-collapse2
 
-          %li.padding-nav= link_to "Live Clients", live_clients_path
-          %li.padding-nav= link_to "Dormant Clients", dormant_clients_path
-          %li.padding-nav
-            %i.fa.fa-user
-          %li= link_to "Sign Out", destroy_manager_session_path,:method => :delete
+      %ul.navbar-nav.ml-auto
+        %li.nav-item
+          %a.nav-link{:href => "/live-clients"} Live Clients
+        %li.nav-item
+          %a.nav-link{:href => "/dormant-clients"} Dormant Clients
+        %li.padding-nav
+          %i.fa.fa-user
+          = link_to "Sign Out", destroy_manager_session_path,:method => :delete
