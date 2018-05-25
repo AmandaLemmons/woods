@@ -10,7 +10,7 @@ class CandidatesController < ApplicationController
 
   def update
     if @candidate.update(candidate_params)
-      redirect_to candidate_path
+      redirect_to candidate_path(id: current_candidate.id)
     else
       render "Edit"
     end
