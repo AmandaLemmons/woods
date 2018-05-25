@@ -17,13 +17,23 @@
         %span.navbar-toggler-icon
     .navbar-collapse.collapse.w-100.order-3.dual-collapse2
       %ul.navbar-nav.ml-auto
-        %li.nav-item.dropdown
-          %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            .i.fa.fa-user
-          .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-            %a.dropdown-item{:href => "/candidates/#{current_candidate.id} "} Profile
-            -if current_candidate.present?
-              %a.dropdown-item=link_to "Sign Out", destroy_candidate_session_path,:method => :delete
-            -else
-              %a.dropdown-item
-                %nav-link#signout=link_to "Sign In", new_candidate_session_path
+        %li.nav-item
+          %a.nav-link{:href => "/candidates/#{current_candidate.id} "} Profile
+        %li.nav-item
+          %a.nav-link= link_to "Edit Profile", edit_candidate_registration_path(id: current_candidate.id)
+        %li.nav-item
+        -if current_candidate.present?
+          %a.nav-link=link_to "Sign Out", destroy_candidate_session_path,:method => :delete
+        -else
+          %a.nav-link=link_to "Sign In", new_candidate_session_path
+        -#   -if current_candidate.present?
+        -# %li.nav-item.dropdown
+          -# %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          -#   .i.fa.fa-user
+          -# .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          -#   %a.dropdown-item{:href => "/candidates/#{current_candidate.id} "} Profile
+          -#   -if current_candidate.present?
+          -#     %a.dropdown-item=link_to "Sign Out", destroy_candidate_session_path,:method => :delete
+          -#   -else
+          -#     %a.dropdown-item
+          -#       %nav-link#signout=link_to "Sign In", new_candidate_session_path
