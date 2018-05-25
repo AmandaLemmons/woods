@@ -1,5 +1,5 @@
 = simple_form_for(@client, html: {class: 'form-horizontal'}) do |f|
-  = f.input :status,  collection: Client.statuses.keys, label: "Select your first key"
+  = f.input :status,  collection: Client.statuses.keys, label: "Select client's status"
   = f.input :contact_name, label: "Contact"
   = f.input :company, label: "Company"
   = f.input :address, label: "Address"
@@ -7,4 +7,7 @@
   = f.input :email, label: "Email"
   = f.input :comments, label: "Comments"
   = f.input :other, label: "Other"
-  = f.button :submit, label: "Submit"
+
+  .modal-footer
+    %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+    = f.button :submit, label: "Submit", class:"btn btn-primary"
