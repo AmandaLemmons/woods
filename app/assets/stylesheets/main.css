@@ -77,7 +77,7 @@ a:focus,
 input:focus {
 	text-decoration:none;
 	outline: none;
-	/* color:#008def; */
+	color:white;
 		/* color:#336600; */
 }
 
@@ -1116,13 +1116,13 @@ input:focus, textarea:focus, select:focus,
 
 /* Resume Banner*/
 
-#resume_btn{
+ /* a .btn .resume_btn{
 	padding: 8px 20px 5px;
 	text-transform: uppercase;
 	background-color: #7b7b7b;
 	border-color: #f5f4f5;
 	color: white;
-}
+} */
 /* Tr Job Post */
 
 .job-item {

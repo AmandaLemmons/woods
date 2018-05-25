@@ -25,7 +25,7 @@
           %li.nav-item.dropdown
             %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
               .i.fa.fa-user
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item=link_to "Sign In", new_candidate_session_path
-              %a.dropdown-item
-                %nav-link#signout=link_to "Manager Area", new_candidate_session_path
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item=link_to "Sign In", new_candidate_session_path
+          %a.dropdown-item
+            %nav-link#signout=link_to "Manager Area", new_candidate_session_path
