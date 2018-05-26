@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+
+    <a class="navbar-brand img-responsive" href="/"><%= image_tag("woods_logo.jpg") %></a>
+    <div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "About Us", about_us_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact Us", contact_us_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Job Vacancies", job_vacancies_path, class:"nav-link"%>
+        </li>
+
+        <li class="nav-item ">
+            <%= link_to "Profile", candidate_path(id: current_candidate.id), class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit Profile", edit_candidate_registration_path(id: current_candidate.id), class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign Out", destroy_candidate_session_path, :method => :delete, class:"nav-link"%>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

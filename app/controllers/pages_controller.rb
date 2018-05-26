@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @categories = Category.all
     @testimonials = Testimonial.all
+    @client = Client.new
   end
 
   def manager_home
