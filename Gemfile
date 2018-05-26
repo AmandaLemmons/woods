@@ -7,7 +7,6 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.1.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
-gem 'rails_12factor'
 gem 'popper_js', '~> 1.12.9'
 
 

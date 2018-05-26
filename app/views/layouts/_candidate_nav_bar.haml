@@ -23,7 +23,7 @@
           %a.nav-link= link_to "Edit Profile", edit_candidate_registration_path(id: current_candidate.id)
         %li.nav-item
         -if current_candidate.present?
-          %a.nav-link=link_to "Sign Out", destroy_candidate_session_path,:method => :delete
+          %a.nav-link=link_to "Sign Out", destroy_candidate_session_path(id: current_candidate.id),:method => :delete
         -else
           %a.nav-link=link_to "Sign In", new_candidate_session_path
         -#   -if current_candidate.present?
