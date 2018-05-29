@@ -7,7 +7,12 @@
     <p>"<%= testimonial.description%>"</p>
     <div class="testimonial-title text-center">
       <h2><%= testimonial.name%></h2>
-      <p><%= testimonial.position%>, <%= testimonial.company%></p>
+        <% if testimonial.position.present? %>
+          <p><%= testimonial.position%>, <%= testimonial.company%></p>
+        <% else %>
+          <p><%= testimonial.company%></p>
+        <% end %>
+
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
