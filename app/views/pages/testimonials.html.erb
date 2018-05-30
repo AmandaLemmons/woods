@@ -1,0 +1,36 @@
+<div class="tr-breadcrumb bg-image section-before">
+	<div class="container">
+		<div class="breadcrumb-info text-center">
+			<div class="page-title">
+				<h1>Testimonials</h1>
+			</div>
+		</div>
+	</div><!-- /.container -->
+</div><!-- /.tr-breadcrumb -->
+<div class="container section-padding">
+  <div class="row">
+    <%@testimonials.each do |testimonial| %>
+    <div class="col-lg-4">
+      <div class="card-deck mb-4 text-center ">
+        <div class="card mb-4 box-shadow">
+          <!-- <div class="card-header">
+            <h4 class="my-0 font-weight-normal">< testimonial.name%></h4>
+          </div> -->
+          <div class="card-body">
+            <p><%= testimonial.description%></p>
+            <div class="testimonial-title text-center">
+              <h2><%= testimonial.name%></h2>
+                <% if testimonial.position.present? %>
+                  <p><%= testimonial.position%>, <%= testimonial.company%></p>
+                <% else %>
+                  <p><%= testimonial.company%></p>
+                <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get 'job-category/:id' => 'jobs#job_category', as: :job_category
   # get 'profile/:id' => 'candidates#candidate_profile', as: :profile
   get 'apply/:id' => 'resumes#apply', as: :apply_for_job
-
+  get 'testimonials' => 'pages#testimonials', as: :testimonials
 
 
 end

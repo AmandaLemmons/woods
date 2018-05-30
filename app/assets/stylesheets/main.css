@@ -699,13 +699,22 @@ input:focus, textarea:focus, select:focus,
 	font-size: 12px;
 }
 
+.jumbotron {
+	background-image: url(1.png);
+	background-size: cover;
+	padding: 170px 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
 
 /* Tr Banner */
 
 .tr-banner {
 	color: #fff;
-	padding: 120px 0;
-	background-image: url(leaves.jpg);
+	/* padding: 120px 0; */
+	padding: 170px 0;
+
+	background-image: url(1.png);
 }
 
 .banner-content h1 {

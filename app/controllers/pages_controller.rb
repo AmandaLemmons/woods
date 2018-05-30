@@ -13,6 +13,10 @@ class PagesController < ApplicationController
   def about_us
   end
 
+  def testimonials
+    @testimonials = Testimonial.all
+  end
+
 
 
 
