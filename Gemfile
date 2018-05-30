@@ -4,11 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "haml"
 gem 'simple_form'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
-
 
 # # Plus integrations with:
 gem 'devise'
