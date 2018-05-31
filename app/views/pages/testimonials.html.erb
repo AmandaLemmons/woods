@@ -20,12 +20,8 @@
             <p><%= testimonial.description%></p>
             <div class="testimonial-title text-center">
               <h2><%= testimonial.name%></h2>
-                <% if testimonial.position.present? %>
-                  <p><%= testimonial.position%>, <%= testimonial.company%></p>
-                <% else %>
-                  <p><%= testimonial.company%></p>
-                <% end %>
-
+							<p><i><%= testimonial.position%></i> </p>
+							<p><%= testimonial.company%></p>
             </div>
           </div>
         </div>
