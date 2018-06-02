@@ -96,8 +96,8 @@ input:focus, textarea:focus, select:focus,
 }
 
 .section-title h1 {
-	font-size: 24px;
-	color: #336600;
+	font-size: 36px;
+	color: #3d464d;
 	text-align: center;
 	text-transform: uppercase;
 	margin: 0 0 45px;
@@ -130,8 +130,8 @@ input:focus, textarea:focus, select:focus,
 .btn.btn-primary {
 	padding: 8px 20px 5px;
 	text-transform: uppercase;
-	background-color: #008def;
-	border-color: #008def;
+	background-color: #336600;
+	border-color: #b4c5ab;
 
 }
 .btn.btn-grey {
@@ -1561,7 +1561,7 @@ input:focus, textarea:focus, select:focus,
 
 .fun-fact h1 {
 	font-size: 30px;
-	color: #336600;
+	color: #3d464d;
 	margin: 20px 0 0;
 }
 
