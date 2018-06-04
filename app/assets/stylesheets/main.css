@@ -132,8 +132,18 @@ input:focus, textarea:focus, select:focus,
 	text-transform: uppercase;
 	background-color: #336600;
 	border-color: #b4c5ab;
-
 }
+
+.btn.btn-apply {
+	padding: 5px 10px;
+	/* text-transform: uppercase; */
+	background-color: white;
+	border-color: #b4c5ab;
+}
+.btn.btn-apply:hover {
+	background-color: #336600;
+}
+
 .btn.btn-grey {
 	padding: 8px 20px 5px;
 	text-transform: uppercase;
@@ -700,11 +710,12 @@ input:focus, textarea:focus, select:focus,
 }
 
 .jumbotron {
-	background-image: url(1.png);
+	background-image: url(leaves.jpg);
 	background-size: cover;
 	padding: 170px 0;
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	/* background-size: 100% 100%; */
+	overflow: hidden;
 }
 
 /* Tr Banner */

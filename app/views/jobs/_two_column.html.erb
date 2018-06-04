@@ -31,13 +31,14 @@
                 </div>
                 <ul class="tr-list job-meta">
                   <% if current_candidate.nil? %>
-                    <li><%= link_to "Apply", candidate_session_path(id: job.id, category_id: job.category.try(:id)), class: "btn btn-primary" %> </li>
+                    <li><%= link_to "Apply", candidate_session_path(id: job.id, category_id: job.category.try(:id)), class: "btn btn-apply" %> </li>
                   <% else %>
-                    <li><%= link_to "Apply", apply_for_job_path(id: job.id, category_id: job.category.try(:id)), class: "btn btn-primary" %> </li>
+                    <li><%= link_to "Apply", apply_for_job_path(id: job.id, category_id: job.category.try(:id)), class: "btn btn-apply" %> </li>
                   <% end %>
                   <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
                   <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= job.experience_level.try(:level)%></li>
                   <li><span><i class="fa fa-money" aria-hidden="true"></i></span><%=job.salary.try(:salary)%></li>
+
                 </ul>
               </div>
             </div>
