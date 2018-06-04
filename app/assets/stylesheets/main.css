@@ -311,6 +311,8 @@ input:focus, textarea:focus, select:focus,
 	font-size: 48px;
 	margin: 0;
 	text-transform: capitalize;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .tr-breadcrumb .job-meta {
@@ -731,6 +733,8 @@ input:focus, textarea:focus, select:focus,
 .banner-content h1 {
 	font-size: 48px;
 	margin-top: 0;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .banner-content h2 {
