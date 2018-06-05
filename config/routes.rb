@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'contact/new'
   get 'resumes/index'
   get 'resumes/new'
   get 'resumes/create'
@@ -22,7 +21,7 @@ Rails.application.routes.draw do
 
 
   get 'about-us' => 'pages#about_us', as: :about_us
-  get 'contact-us' => 'contact#contact_us', as: :contact_us
+  get 'contact-us' => 'contacts#contact_us', as: :contact_us
   get 'job-vacancies' => 'jobs#job_vacancies', as: :job_vacancies
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
   get 'live-clients' => 'clients#live_clients', as: :live_clients
