@@ -54,13 +54,13 @@ body {
 	color: #7b7b7b;
 	background-color: #f5f4f5;
 	-webkit-font-smoothing: antialiased;
-	font-family: 'Merriweather', serif;
+	font-family: 'Calibri', serif;
 
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Calibri', sans-serif;
 
 	font-weight:normal;
 }
@@ -458,7 +458,7 @@ input:focus, textarea:focus, select:focus,
 }
 
 #testing
-{font-family:  'Merriweather', serif;
+{font-family:  'Calibri', serif;
 	color: red;
 }
 
@@ -1437,7 +1437,7 @@ input:focus, textarea:focus, select:focus,
 /* Tr Steps */
 
 .tr-steps {
-	background-image: url(../images/bg/step-bg.jpg);
+	background-image: url(leaves.jpg);
 	position: relative;
 	z-index: 1;
 }

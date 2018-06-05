@@ -11,33 +11,33 @@
 
 /* Table of Contents
 ==================================================
-# Global 
-# Header 
-# Tr Banner 
-# Tr Category 
-# Tr Cta 
-# Tr Job Post 
-# Tr Steps 
-# Tr Recent News 
-# Tr Testimonial 
+# Global
+# Header
+# Tr Banner
+# Tr Category
+# Tr Cta
+# Tr Job Post
+# Tr Steps
+# Tr Recent News
+# Tr Testimonial
 # Tr Fun Fact
-# Tr Download App 
-# Job Details 
-# Tr Sidebar 
-# User Account 
-# Account Info 
-# Edit Resume 
-# Apply Job 
-# archived-job 
-# Close Account 
-# Open Role 
+# Tr Download App
+# Job Details
+# Tr Sidebar
+# User Account
+# Account Info
+# Edit Resume
+# Apply Job
+# archived-job
+# Close Account
+# Open Role
 # Tr Found
-# Tr Coming Soon 
-# Gmap 
-# Tr Pricing 
-# Tr Notification 
-# Footer 
-# Extra CSS 
+# Tr Coming Soon
+# Gmap
+# Tr Pricing
+# Tr Notification
+# Footer
+# Extra CSS
 
 ==================================================
 
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style:none;
 }
 
-a, 
+a,
 a:hover,
 a:focus,
 input:focus {
@@ -83,7 +83,7 @@ a:hover {
 
 a:active,
 a:focus, button:focus, .btn:focus,
-input:focus, textarea:focus, select:focus, 
+input:focus, textarea:focus, select:focus,
 .form-control, .form-control:focus {
     outline: none !important;
     text-decoration: none !important;
@@ -126,12 +126,12 @@ input:focus, textarea:focus, select:focus,
 	padding: 8px 20px 5px;
 	text-transform: uppercase;
 	background-color: #008def;
-	border-color: #008def;	
+	border-color: #008def;
 }
 
 .btn i {
 	float: left;
-	font-size: 20px;	
+	font-size: 20px;
 	margin-right: 10px;
 }
 
@@ -448,11 +448,11 @@ input:focus, textarea:focus, select:focus,
 .navbar-default .navbar-nav li a:hover,
 .navbar-default .navbar-nav li.active>a,
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover,
 .tr-dropdown-menu li a:hover {
 	color: #008def;
@@ -547,7 +547,7 @@ input:focus, textarea:focus, select:focus,
 
 .tr-dropdown-menu {
 	position: absolute;
-	top: 100%;	
+	top: 100%;
 	right: 0;
     padding: 10px 0;
     min-width: 180px;
@@ -560,7 +560,7 @@ input:focus, textarea:focus, select:focus,
 	-moz-transform: translateY(10px);
 	-ms-transform: translateY(10px);
 	-o-transform: translateY(10px);
-	transform: translateY(10px); 
+	transform: translateY(10px);
 	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	-moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	-ms-box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -583,7 +583,7 @@ input:focus, textarea:focus, select:focus,
   -moz-animation: fadeInUp 400ms;
   -ms-animation: fadeInUp 400ms;
   -o-animation: fadeInUp 400ms;
-  animation: fadeInUp 400ms;    
+  animation: fadeInUp 400ms;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -777,9 +777,9 @@ input:focus, textarea:focus, select:focus,
 	color: #11414e;
 }
 
-.banner-form .form-control, 
-.banner-form button.btn-primary, 
-.banner-form .dropdown {	
+.banner-form .form-control,
+.banner-form button.btn-primary,
+.banner-form .dropdown {
 	float: left;
 	height:46px;
 	margin-bottom: 0;
@@ -810,17 +810,17 @@ input:focus, textarea:focus, select:focus,
 
 /* Homepage 2 Css */
 
-.homepage-2 .navbar-default .navbar-nav li a:hover, 
-.homepage-2 .navbar-default .navbar-nav li.active>a, 
-.homepage-2 .navbar-default .navbar-nav>li>a:hover, 
-.homepage-2 .navbar-default .navbar-nav>li>a:focus, 
-.homepage-2 .navbar-default .navbar-nav>li.active>a, 
-.homepage-2 .navbar-default .navbar-nav>.active>a:hover, 
-.homepage-2 .navbar-default .navbar-nav>.active>a, 
-.homepage-2 .navbar-default .navbar-nav>.active>a:focus, 
-.homepage-2 .navbar-default .navbar-nav>.active>a:hover, 
+.homepage-2 .navbar-default .navbar-nav li a:hover,
+.homepage-2 .navbar-default .navbar-nav li.active>a,
+.homepage-2 .navbar-default .navbar-nav>li>a:hover,
+.homepage-2 .navbar-default .navbar-nav>li>a:focus,
+.homepage-2 .navbar-default .navbar-nav>li.active>a,
+.homepage-2 .navbar-default .navbar-nav>.active>a:hover,
+.homepage-2 .navbar-default .navbar-nav>.active>a,
+.homepage-2 .navbar-default .navbar-nav>.active>a:focus,
+.homepage-2 .navbar-default .navbar-nav>.active>a:hover,
 .homepage-2 .tr-dropdown-menu li a:hover,
-.homepage-2 .navbar-right .dropdown i, 
+.homepage-2 .navbar-right .dropdown i,
 .homepage-2 .sign-in li i,
 .homepage-2 .dropdown a:hover,
 .homepage-2 .sign-in a:hover,
@@ -912,8 +912,8 @@ input:focus, textarea:focus, select:focus,
 	border-color: #232a2f;
 }
 
-.homepage-2 .job-tab .nav-tabs>li.active>a, 
-.homepage-2 .job-tab .nav-tabs>li.active>a:focus, 
+.homepage-2 .job-tab .nav-tabs>li.active>a,
+.homepage-2 .job-tab .nav-tabs>li.active>a:focus,
 .homepage-2 .job-tab .nav-tabs>li.active>a:hover,
 .homepage-2 .job-tab .nav-tabs>li>a:hover {
 	background-color: #f26522;
@@ -972,9 +972,10 @@ input:focus, textarea:focus, select:focus,
 	color: #8f8d8f;
 	padding: 40px;
 	position: relative;
-	background-color: #fff;
+	background-color: #336600;
 	margin-bottom: 30px;
 	min-height: 310px;
+
 }
 
 .testimonial-info:after {
@@ -1131,8 +1132,8 @@ input:focus, textarea:focus, select:focus,
 	padding: 5px 30px;
 }
 
-.job-tab .nav-tabs>li.active>a, 
-.job-tab .nav-tabs>li.active>a:focus, 
+.job-tab .nav-tabs>li.active>a,
+.job-tab .nav-tabs>li.active>a:focus,
 .job-tab .nav-tabs>li.active>a:hover,
 .job-tab .nav-tabs>li>a:hover {
 	border: none;
@@ -1185,7 +1186,7 @@ input:focus, textarea:focus, select:focus,
 
 .job-meta li,
 .job-meta li a {
-	color: #646464;	
+	color: #646464;
 }
 
 .job-meta li a:hover {
@@ -1243,7 +1244,7 @@ input:focus, textarea:focus, select:focus,
 .job-item .time a span {
 	color: #fff;
     background-color: #f1592a;
-    border-color: #f1592a;	
+    border-color: #f1592a;
 }
 
 .job-item .time a span.part-time {
@@ -1253,7 +1254,7 @@ input:focus, textarea:focus, select:focus,
 
 .job-item .time a span.freelance {
 	background-color: #92278f;
-	border-color: #92278f;	
+	border-color: #92278f;
 }
 
 .job-item .item-overlay {
@@ -1347,7 +1348,7 @@ input:focus, textarea:focus, select:focus,
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
-    transform: scale(0);	
+    transform: scale(0);
 }
 
 .job-social li a:hover:before {
@@ -1370,14 +1371,14 @@ input:focus, textarea:focus, select:focus,
 /* Tr Steps */
 
 .tr-steps {
-	background-image: url(../images/bg/step-bg.jpg);	
+	background-image: url(../images/bg/step-bg.jpg);
 	position: relative;
 	z-index: 1;
 }
 
 .tr-steps .step {
 	font-size: 14px;
-	line-height: 24px;	
+	line-height: 24px;
 	color: #fff;
 	padding:20px 10px 10px;
 }
@@ -1425,7 +1426,7 @@ input:focus, textarea:focus, select:focus,
 .entry-meta li {
 	float: left;
 	color: #424242;
-	font-size: 14px;	
+	font-size: 14px;
 	margin-right: 20px;
 }
 
@@ -1447,7 +1448,7 @@ input:focus, textarea:focus, select:focus,
 
 /* Tr Testimonial */
 
-.tr-testimonial {	
+.tr-testimonial {
 	background-color: #fff;
 }
 
@@ -1455,12 +1456,12 @@ input:focus, textarea:focus, select:focus,
 	padding: 140px 0;
 	background-image: url(../images/bg/testimonial-bg.png);
 	background-repeat: no-repeat;
-	background-position: right bottom;	
+	background-position: right bottom;
 }
 
-.tr-testimonial .slick-prev, 
+.tr-testimonial .slick-prev,
 .tr-testimonial .slick-next {
-	display: none !important; 
+	display: none !important;
 }
 
 .tr-testimonial .media-left {
@@ -1560,7 +1561,7 @@ input:focus, textarea:focus, select:focus,
     overflow: hidden;
     min-height: 75px;
 	color: #fff;
-	font-size: 16px; 
+	font-size: 16px;
 	margin-bottom: 20px;
 }
 
@@ -1586,7 +1587,7 @@ input:focus, textarea:focus, select:focus,
  	line-height: 20px;
 }
 
-.download-app a:hover, 
+.download-app a:hover,
 .download-app a:focus {
  	background-color: rgba(0, 0, 0, 0.2);
  	color:#fff;
@@ -1727,10 +1728,10 @@ input:focus, textarea:focus, select:focus,
 	border: none;
 }
 
-.job-tabs>li a:hover, 
-.job-tabs>li a:focus, 
-.job-tabs>li.active>a, 
-.job-tabs>li.active>a:focus, 
+.job-tabs>li a:hover,
+.job-tabs>li a:focus,
+.job-tabs>li.active>a,
+.job-tabs>li.active>a:focus,
 .job-tabs>li.active>a:hover {
 	border: none;
 	color: #000;
@@ -1898,7 +1899,7 @@ input:focus, textarea:focus, select:focus,
 
 .account-content {
 	padding: 35px 30px;
-	border-radius: 4px;	
+	border-radius: 4px;
 	background-color: #fff;
 }
 
@@ -1963,7 +1964,7 @@ input:focus, textarea:focus, select:focus,
 
 .checkbox label:before {
 	position: absolute;
-	color: #bbc0d4;	
+	color: #bbc0d4;
 	content: "";
 	left: 0;
 	top: 0;
@@ -1976,13 +1977,13 @@ input:focus, textarea:focus, select:focus,
 
 .checkbox label:after {
 	position: absolute;
-	color: #008def;	
+	color: #008def;
 	content: "\f00c";
 	left: 3px;
 	top: 7px;
 	font-family: "fontawesome";
 	font-size: 10px;
-	line-height: 0;	
+	line-height: 0;
 	display: none;
 }
 
@@ -2021,8 +2022,8 @@ input:focus, textarea:focus, select:focus,
 	border-radius: 0;
 }
 
-.nav-tabs.nav-justified>.active>a, 
-.nav-tabs.nav-justified>.active>a:focus, 
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:focus,
 .nav-tabs.nav-justified>.active>a:hover,
 .nav-tabs.nav-justified>li>a:hover {
 	border: 0;
@@ -2096,8 +2097,8 @@ input:focus, textarea:focus, select:focus,
 
 .profile-tabs>li>a:hover,
 .profile-tabs>li>a:focus,
-.profile-tabs>li.active>a, 
-.profile-tabs>li.active>a:focus, 
+.profile-tabs>li.active>a,
+.profile-tabs>li.active>a:focus,
 .profile-tabs>li.active>a:hover {
 	color: #008def;
 	border: 0;
@@ -2258,7 +2259,7 @@ input:focus, textarea:focus, select:focus,
 
 .personal-deatils .right {
     display: table-cell;
-    vertical-align: top;	
+    vertical-align: top;
 	width: 10000px;
 }
 
@@ -2351,7 +2352,7 @@ input:focus, textarea:focus, select:focus,
     cursor: pointer;
    	margin-right: 15px;
     padding: 10px 20px 7px;
-    text-transform: uppercase;	
+    text-transform: uppercase;
 }
 
 .change-photo .upload-photo input {
@@ -2381,7 +2382,7 @@ input:focus, textarea:focus, select:focus,
     margin-top: 5px;
     border-radius: 4px;
     border: 1px solid #e8e6e8;
-    background-color: #faf7fa;	
+    background-color: #faf7fa;
 }
 
 .account-details li a {
@@ -2510,11 +2511,11 @@ input:focus, textarea:focus, select:focus,
     position: relative;
 }
 
-.rating > input { 
-    display: none; 
-} 
+.rating > input {
+    display: none;
+}
 
-.rating > label:before { 
+.rating > label:before {
   margin: 3px;
   font-size: 13px;
   font-family: FontAwesome;
@@ -2522,23 +2523,23 @@ input:focus, textarea:focus, select:focus,
   content: "\f005";
 }
 
-.rating > .half:before { 
+.rating > .half:before {
   content: "\f089";
   position: absolute;
 }
 
 .rating > input:checked ~ label,
 .rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label { 
-    color: #008def;  
+.rating:not(:checked) > label:hover ~ label {
+    color: #008def;
 }
 
 .rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label {
- color: #008def;  
-} 
+ color: #008def;
+}
 
 
 /* Apply Job */
@@ -2756,7 +2757,7 @@ input:focus, textarea:focus, select:focus,
     margin-right: 0;
 }
 
-.additem .icon.clone, 
+.additem .icon.clone,
 .additem .icon.remove{
 	height: 30px;
 	width: 30px;
@@ -2798,7 +2799,7 @@ input:focus, textarea:focus, select:focus,
 .tr-post-job .dropdown {
     padding: 12px 20px;
     margin-bottom: 20px;
-    border-radius: 4px;  
+    border-radius: 4px;
     background-color: #faf7fa;
     border: 1px solid #e8e6e8;
 }
@@ -3207,7 +3208,7 @@ input:focus, textarea:focus, select:focus,
     color: #000;
     border-radius: 4px;
     margin-bottom: 15px;
-    position: relative;	
+    position: relative;
     overflow: hidden;
 }
 
@@ -3224,7 +3225,7 @@ input:focus, textarea:focus, select:focus,
 .pricing h1 sup {
     font-size: 30px;
     font-weight: 500;
-    top: -25px;	
+    top: -25px;
 }
 
 .pricing h1 span {
