@@ -5,3 +5,39 @@
 #signout {
   color: rgba(255, 255, 255, 0.5);
 }
+.avatar {
+  /* ... */
+  width: 900px;
+  height: 135px;
+  background: url(large_logo);
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .avatar {
+    /* ... */
+    width: 900px;
+    height: 135px;
+    background: url(large_logo);
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .avatar {
+    /* ... */
+    width: 578px;
+    height: 90px;
+    background: url(med_logo);
+  }
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 768px) {
+  .avatar {
+    /* ... */
+    width: 320px;
+    height: 90px;
+    background: url(xsmall_logo);
+  }
+}
