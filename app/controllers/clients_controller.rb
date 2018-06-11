@@ -7,23 +7,19 @@ class ClientsController < ApplicationController
     @clients = Client.where(manager_id: current_manager.id)
   end
 
-  def live_clients
-    @clients = Client.where(manager_id: current_manager.id).live_clients
+  def active_clients
+    @clients = Client.where(manager_id: current_manager.id).active_clients
     @client = Client.new
 
   end
 
-  def dormant_clients
-    @clients = Client.where(manager_id: current_manager.id).dormant_clients
+  def inactive_clients
+    @clients = Client.where(manager_id: current_manager.id).inactive_clients
     @client = Client.new
 
   end
 
-  def clients
-    @clients = Client.where(manager_id: current_manager.id).clients
-    @client = Client.new
 
-  end
 
 
 

@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   get 'contact-us' => 'contacts#contact_us', as: :contact_us
   get 'job-vacancies' => 'jobs#job_vacancies', as: :job_vacancies
   get 'job-details/:id' => 'jobs#job_details', as: :job_details
-  get 'live-clients' => 'clients#live_clients', as: :live_clients
-  get 'dormant-clients' => 'clients#dormant_clients', as: :dormant_clients
+  get 'active-clients' => 'clients#active_clients', as: :active_clients
+  get 'inactive-clients' => 'clients#inactive_clients', as: :inactive_clients
   get 'job-category/:id' => 'jobs#job_category', as: :job_category
   # get 'profile/:id' => 'candidates#candidate_profile', as: :profile
   get 'apply/:id' => 'resumes#apply', as: :apply_for_job

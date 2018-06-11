@@ -1,9 +1,8 @@
 class Client < ApplicationRecord
-  enum status: {live: 0, dormant: 1, client: 2 }
+  enum status: {active: 0, inactive: 1 }
   belongs_to :manager
-  scope :clients, ->{ where(status: 2) }
-  scope :dormant_clients, ->{ where(status: 1) }
-  scope :live_clients, ->{ where(status: 0) }
+  scope :inactive_clients, ->{ where(status: 1) }
+  scope :active_clients, ->{ where(status: 0) }
 
 
   def self.filter_clients_by_options(filter_options={})
