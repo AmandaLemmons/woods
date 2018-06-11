@@ -14,9 +14,9 @@
 
       %ul.navbar-nav.ml-auto
         %li.nav-item
-          %a.nav-link{:href => "/live-clients"} Live Clients
+          %a.nav-link{:href => "/live-clients"} Active Clients
         %li.nav-item
-          %a.nav-link{:href => "/dormant-clients"} Dormant Clients
+          %a.nav-link{:href => "/dormant-clients"} Inactive Clients
         %li.padding-nav
           %i.fa.fa-user
           = link_to "Sign Out", destroy_manager_session_path,:method => :delete

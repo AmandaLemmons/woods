@@ -8,11 +8,15 @@
           <%= link_to "About Us", about_us_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
-          <%= link_to "Contact Us", contact_us_path, class:"nav-link"%>
-        </li>
-        <li class="nav-item">
           <%= link_to "Job Vacancies", job_vacancies_path, class:"nav-link"%>
         </li>
+        <li class="nav-item">
+          <%= link_to "Testimonials", testimonials_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact Us", contact_us_path, class:"nav-link"%>
+        </li>
+
 
         <li class="nav-item ">
             <%= link_to "Profile", candidate_path(id: current_candidate.id), class:"nav-link"%>
