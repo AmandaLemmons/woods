@@ -8,7 +8,9 @@
 		          <h4>Add your resume and let your next job find you.</h4>
             </div>
             <div class= "col-12 col-md-4">
-              <a href="/resumes/new" class="btn btn-primary pull-right">Add Your Resume</a>
+              <!-- <a href="/resumes/new" class="btn btn-primary pull-right"></a> -->
+							<%= link_to "Add Your Resume", apply_for_job_path(id: 0, category_id: 0), class: "btn btn-primary pull-right" %>
+							<!-- <li>= link_to "Apply",  %> </li> -->
             </div>
           </div>
 				<!-- </div> -->

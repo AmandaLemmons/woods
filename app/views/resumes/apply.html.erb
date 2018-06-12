@@ -21,7 +21,6 @@
                 <%= f.input :candidate_id, as: :hidden, :value => { :candidate_id => current_candidate.id }%>
                 <%=  f.input :job_id, as: :hidden, :value => { :job_id => params[:id] } %>
                 <%= f.button :submit, class: "btn btn-primary", :locals => {:job_id => params[:id], :category_id => params[:category_id] }%>
-                <% binding.pry %>
 
              <% end %>
            </div>
