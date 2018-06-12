@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 gem "haml"
@@ -23,6 +24,8 @@ gem  "pry"
 gem 'carrierwave', '~> 1.0'
 gem 'mail_form'
 gem 'sendgrid-ruby'
+gem 'fog'
+gem 'aws-sdk', '~> 2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

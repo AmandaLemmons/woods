@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :configure_sign_up_params, if: :devise_controller?
+  require 'dotenv'
+  Dotenv.load
+
+
 
   def after_sign_in_path_for(resource)
     clients_path
