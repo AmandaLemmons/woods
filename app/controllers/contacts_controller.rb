@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  require 'lib/carrierwave/storage/fog'
 
   def contact_us
     @contact = Contact.new
