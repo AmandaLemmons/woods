@@ -23,7 +23,9 @@ gem  "pry"
 # gem 'geocoder'
 gem 'carrierwave', '~> 1.0'
 gem 'mail_form'
-gem 'sendgrid-ruby'
+# gem 'sendgrid-ruby'
+gem 'sparkpost_rails'
+
 gem 'fog'
 gem 'aws-sdk', '~> 2'
 
