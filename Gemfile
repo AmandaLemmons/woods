@@ -26,8 +26,10 @@ gem 'mail_form'
 # gem 'sendgrid-ruby'
 gem 'sparkpost_rails'
 
-gem 'fog'
-gem 'aws-sdk', '~> 2'
+gem 'fog-aws'
+
+gem 'aws-sdk', '~> 2.3'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
