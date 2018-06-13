@@ -26,7 +26,7 @@ gem 'mail_form'
 # gem 'sendgrid-ruby'
 gem 'sparkpost_rails'
 
-gem 'fog-aws'
+gem "fog-aws"
 
 gem 'aws-sdk', '~> 2.3'
 
