@@ -31,5 +31,6 @@
         %td #{client.phone_number}
         %td #{client.comments}
         %td #{client.other}
-        %td #{client.status}
-        %td= link_to "Edit", edit_client_path(client)
+        %td{class: color_client_status(client.status)}
+          #{client.status}
+        %td= link_to "Edit", edit_client_path(client), class:"btn btn-sm btn-success"

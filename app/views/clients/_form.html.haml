@@ -5,8 +5,8 @@
   = f.input :address, label: "Address"
   = f.input :phone_number, label: "Phone Number"
   = f.input :email, label: "Email"
-  = f.input :comments, label: "Comments"
-  = f.input :other, label: "Other"
+  = f.input :comments, as: :text, label: "Comments"
+  = f.input :other, as: :text, label: "Other"
 
   .modal-footer
     %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
