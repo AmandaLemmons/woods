@@ -25,12 +25,12 @@
     - @clients.each_with_index do |client, index|
       %tr
         %th{:scope => "row"} #{index + 1}
-        %td #{client.company}
-        %td #{client.contact_name}
-        %td #{client.address}
-        %td #{client.phone_number}
+        %td.noselect #{client.company}
+        %td.noselect #{client.contact_name}
+        %td.noselect #{client.address}
+        %td.noselect #{client.phone_number}
         %td #{client.comments}
-        %td #{client.other}
+        %td.noselect #{client.other}
         %td{class: color_client_status(client.status)}
           #{client.status}
         %td= link_to "Edit", edit_client_path(client), class:"btn btn-sm btn-success"
