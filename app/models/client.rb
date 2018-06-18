@@ -20,6 +20,10 @@ class Client < ApplicationRecord
     records
   end
 
+  def to_s
+   self.contact_name
+ end
+
 
 
 end

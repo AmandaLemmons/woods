@@ -15,7 +15,8 @@ class Job < ApplicationRecord
   def self.filter_jobs_by_options(jobs_filter_options={})
     date = Date.today + 1.day
     if jobs_filter_options[:search].blank?
-      records = self.where(updated_at: (date - 30.day)..date).order(updated_at: :desc)
+      # records = self.where(updated_at: (date - 30.day)..date).order(updated_at: :desc)
+      records= self.order(title: :asc)
     else
       records = self.where(nil)
 
