@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   devise_for :candidates, controllers: { sessions: 'candidates/sessions', registrations: 'candidates/registrations', passwords: 'candidates/passwords'}
   resources :candidates, :only => [:show, :edit]
 
+  get 'home' => 'pages#home', as: :home
 
   get 'about-us' => 'pages#about_us', as: :about_us
   get 'contact-us' => 'contacts#contact_us', as: :contact_us
