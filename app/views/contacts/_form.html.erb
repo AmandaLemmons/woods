@@ -1,5 +1,7 @@
 <%= simple_form_for @contact, :html => {:class => 'form-horizontal tr-form' } do |f| %>
-
+  <% if flash[:error].present? %>
+    <p> flash[:error]</p>
+  <% end %>
 <div class="row">
   <div class="col-sm-6">
     <%= f.input :name, :required => true, class:"form-control", placeholder: "Full Name"  %>

@@ -3,12 +3,11 @@ Rails.application.routes.draw do
   get 'resumes/new'
   get 'resumes/create'
   get 'resumes/destroy'
-  root 'pages#home'
+  root 'pages#about_us'
   resources :jobs
   resources :clients
   resources :resumes
   resources :contacts, only: [:new, :create]
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

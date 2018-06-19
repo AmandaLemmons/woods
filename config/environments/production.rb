@@ -76,8 +76,10 @@ Rails.application.configure do
 
 
 
-  config.action_mailer.default_url_options = { :host => 'https://www.woodsrecruitment.co.uk' }
+  config.action_mailer.default_url_options = { host: 'https://www.woodsrecruitment.co.uk' }
   config.action_mailer.delivery_method = :sparkpost
+
+
 
 
    # config.action_mailer.delivery_method = :smtp
