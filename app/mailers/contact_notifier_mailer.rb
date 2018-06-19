@@ -1,5 +1,5 @@
 class ContactNotifierMailer < ApplicationMailer
-  default :from => 'amanda.lemmons@gmail.com'
+  default :from => 'info@woodsrecruitment.co.uk'
 
    # send a signup email to the user, pass in the user object that   contains the user's email address
    def send_signup_email(email, name, text)
