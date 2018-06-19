@@ -19,20 +19,20 @@ permit_params :company, :address, :phone_number, :email, :comments, :other, :con
     actions
   end
 
-  form do |f|
-    f.inputs 'Client' do
-      f.input :contact_name
-      f.input :status
-      f.input :company
-      f.input :address
-      f.input :phone_number
-      f.input :email
-      f.input :comments
-      f.input :other
-      f.input :manager.email
-    end
-    f.actions
-  end
+  # form do |f|
+  #   f.inputs 'Client' do
+  #     f.input :contact_name
+  #     f.input :status
+  #     f.input :company
+  #     f.input :address
+  #     f.input :phone_number
+  #     f.input :email
+  #     f.input :comments
+  #     f.input :other
+  #     f.input :manager_id
+  #   end
+  #   f.actions
+  # end
 
   # filter :manager, as: :select, collection: ->{ Client.all.to_s }
   # filter :manager, :collection => proc {(Client.all).map{|c| [c.manager.email, c.id]}.uniq}
