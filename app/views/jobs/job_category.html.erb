@@ -1,24 +1,21 @@
+<div class="tr-breadcrumb bg-image ">
+	<div class="container">
+		<div class="breadcrumb-info text-center">
+			<div class="avatar mx-auto d-block"></div>
+			 <div class="page-title">
+         <% if @jobs.empty? %>
+				     <h1>There are not any <%= @category.first.name %> jobs available at this time.</h1>
+        <% else %>
+          <h1> Latest <%= @jobs.first.category.name%> Jobs </h1>
+        <% end %>
+			</div>
+		 </div>
+	 </div>
+ </div>
+
 <div class="container" style="padding-top: 30px;">
   <% if @jobs.empty? %>
-    <div class="tab-content tr-job-posted">
-      <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <div class="job-item">
-              <div class="job-info">
-                <div class="clearfix">
-                  <span class="tr-title">
-                    There are not any <%= @category.first.name %> jobs available at this time.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   <% else %>
-    <h2 class = "text-center"> Latest <%= @jobs.first.category.name%> Jobs </h2>
     <div class="tab-content tr-job-posted">
       <div role="tabpanel" class="tab-pane two-column active in" id="two-column">
         <div class="row">
