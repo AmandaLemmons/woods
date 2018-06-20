@@ -9,7 +9,7 @@
   /* ... */
   width: 900px;
   height: 135px;
-  background: url(large_logo);
+  background: image-url("large_logo");
 }
 
 
@@ -18,7 +18,7 @@
     /* ... */
     width: 900px;
     height: 135px;
-    background: url(large_logo);
+    background: image-url("large_logo");
   }
 }
 
@@ -28,7 +28,7 @@
     /* ... */
     width: 578px;
     height: 90px;
-    background: url(med_logo);
+    background: image-url("med_logo");
   }
 }
 
@@ -38,7 +38,7 @@
     /* ... */
     width: 320px;
     height: 90px;
-    background: url(xsmall_logo);
+    background: image-url("xsmall_logo");
   }
 }
 
