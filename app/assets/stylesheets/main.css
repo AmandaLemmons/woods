@@ -304,7 +304,7 @@ input:focus, textarea:focus, select:focus,
 	color: #fff;
 	padding: 100px 0;
 	overflow: hidden;
-	background-image: url(leaves.jpg);
+	background-image: image-url("leaves.jpg");
 }
 
 .page-title h1 {
