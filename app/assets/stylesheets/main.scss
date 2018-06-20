@@ -712,7 +712,7 @@ input:focus, textarea:focus, select:focus,
 }
 
 .jumbotron {
-	background-image: url(leaves.jpg);
+	background-image: image-url("leaves.jpg");
 	background-size: cover;
 	padding: 170px 0;
 	background-repeat: no-repeat;
@@ -1437,7 +1437,7 @@ input:focus, textarea:focus, select:focus,
 /* Tr Steps */
 
 .tr-steps {
-	background-image: url(leaves.jpg);
+	background-image: image-url("leaves.jpg");
 	position: relative;
 	z-index: 1;
 }
