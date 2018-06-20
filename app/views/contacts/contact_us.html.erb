@@ -27,11 +27,12 @@
 					<div class="col-12 col-md-12 col-lg-4">
 						<div class="section">
 							<span class="tr-title">Contact Info</span>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							<p><%= link_to "Get directions to our offices.", "https://goo.gl/maps/szforAqWmNT2", :target => "_blank", :style=>'color: #7b7b7b;' %>
+							</p>
 							<ul class="tr-list info-list">
 								<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br>Redhill House<br>41 Hope St<br>Chester <br>CH4 8BU </span></li>
 								<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T: 01244 345560 <br>F: 01244 470400</span></li>
-								<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body">info@woodsrecruitment.co.uk</span></li>
+								<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "info@woodsrecruitment.co.uk", "info@woodsrecruitment.co.uk"%> </span></li>
 							</ul>
 							<span class="tr-title">Social Network</span>
 							<div class="social">
