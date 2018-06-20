@@ -6,8 +6,8 @@
 				<h1>About Us</h1>
 			</div> -->
 		<!-- </div> -->
-	<!-- </div><!/.container --> 
-<!-- </div><!/.tr-breadcrumb --> 
+	<!-- </div><!/.container -->
+<!-- </div><!/.tr-breadcrumb -->
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -24,9 +24,8 @@
 				We pride ourselves in offering a first class recruitment service at extremely competitive rates! We guarantee to reduce the cost of supplying temporary and permanent staff whilst improving the level of service provided.</p>
 				<span class="tr-title"><b>How we achieve our goals?</b></span>
 				<p class="text-justify">We are passionate about excellent service and value for money.</p>
-				<p class="text-justify">We have grown organically over the last fifteen years and are passionate about excellent service and value for money.<br>
-				Our Business Associates have many years recruitment and marketing experience and pride themselves in listening to client needs and providing a first class service at highly competitive rates.<br>
-				Read our <%= link_to "testimonials", testimonials_path%> to see what our clients have to say about us!</p>
+				<p class="text-justify">We have grown organically over the last fifteen years and are passionate about excellent service and value for money.<br>Our Business Associates have many years recruitment and marketing experience and pride themselves in listening to client needs and providing a first class service at highly competitive rates.<br>
+				Read our <%= link_to "testimonials", testimonials_path, :style=>'color: #3d464d;'%> to see what our clients have to say about us!</p>
 				<span class="tr-title"><b>What we offer?</b></span>
 				<p class="text-justify">We supply temporary and permanent recruitment to clients in all areas of the UK covering England, Scotland, Wales and Northern Ireland.<br>
 				We have a purpose built database system designed on our website containing a vast number of candidates who have registered for vacancies in the following Industry sectors:<p>
@@ -53,5 +52,8 @@
 		</div>
 	</div>
 </div>
+<%= render partial: "pages/testimonials" %>
+<%= render partial: "pages/steps_to_sign_up" %>
+
 <%= render partial: "pages/add_resume_banner" %>
 <%= render partial: "layouts/footer" %>
