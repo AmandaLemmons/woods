@@ -25,6 +25,7 @@ class JobsController < ApplicationController
   end
 
   def job_details
+    @job = Job.find(params[:id])
   end
 
   def google_map(center)

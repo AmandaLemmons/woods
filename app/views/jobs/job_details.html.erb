@@ -1,1 +1,72 @@
-<%= render partial: "resumes/uploader", :locals => {:job_id => params[:id], :category_id => params[:category_id] } %>
+<div class="tr-breadcrumb bg-image section-before">
+ 		<div class="container">
+ 			<div class="breadcrumb-info text-center">
+        <div class="avatar mx-auto d-block"></div>
+ 				<div class="page-title">
+ 					<h1><%= @job.title %></h1>
+ 				</div>
+ 				<ul class="tr-list job-meta list-inline">
+   					<li><i class="fa fa-map-signs" aria-hidden="true"></i><%= @job.location %></li>
+   					<li><i class="fa fa-map-marker" aria-hidden="true"></i><%= @job.experience_level.try(:level) %></li>
+   					<li><i class="fa fa-money" aria-hidden="true"></i><%= @job.salary.try(:salary)%></li>
+   					<li><i class="fa fa-tags" aria-hidden="true"></i><%= @job.category.try(:name) %></li>
+   					<li><i class="fa fa-hourglass-start" aria-hidden="true"></i>Application Deadline : June 27, 2017</li>
+   				</ul>
+ 			</div>
+ 		</div><!-- /.container -->
+ 	</div><!-- /.tr-breadcrumb -->
+
+<div class="job-details section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-md-9">
+				<div class="job-summary section">
+					<span class="tr-title">Job Summary</span>
+					<p><%= @job.description%> </p> <br>
+					<span>Key Responsibilities:</span>
+					<p>Execute all visual design stages of website design from concept to final hand-off to development Create print advertisements, social media advertisements, client collateral & digital resizes according to Client demands With direction of the Creative team, input into new design ideas for client branding Update & keep all agency collateral materials, including keeping records of Client's logos, fonts, images, etc.</p>
+          <span>Minimum Requirements</span>
+					<ul class="tr-list">
+						<li>Bachelor's Degree</li>
+						<li>2-5 years of relevant experience ( or equivalent educational experience)</li>
+						<li>Experience developing in Wordpress and other web design platforms</li>
+						<li>HTML, CSS and JavaScript experience a plus</li>
+						<li>In depth knowledge & technical experience of Photoshop, Illustrator, InDesign, Adobe PDF, Keynote, PowerPoint, Microsoft Word & Excel</li>
+						<li>Exceptional eye for design, deep understanding of creativity and ability to recognize fresh approaches to Advertising </li>
+						<li>Must be fluent in Spanish; working written and spoken proficiency</li>
+						<li>**All applicants must be eligible to work in the U.S. without sponsorship</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="tr-sidebar">
+					<div class="widget-area">
+						<div class="widget short-info">
+							<h3 class="widget_title">Short Info</h3>
+							<ul class="tr-list">
+								<li><div class="pull-left"><i class="fa fa-calendar" aria-hidden="true"></i></div> <div class="media-body"><span>Published:</span><%=time_ago_in_words(@job.updated_at) %> ago</div></li>
+								<li><div class="pull-left"><i class="fa fa-industry" aria-hidden="true"></i></div> <div class="media-body"><span>Industry:</span><%= @job.category.try(:name)%></div></li>
+								<li><div class="pull-left"><i class="fa fa-line-chart" aria-hidden="true"></i></div> <div class="media-body"><span>Experience:</span><%= @job.experience_level.try(:level)%></div></li>
+							</ul>
+						</div><!-- /.widger -->
+						<div class="widget cmpany-info">
+							<h3 class="widget_title">Company Info</h3>
+							<span><%= @job.company%></span>
+							<ul class="tr-list">
+								<li><span>Address:</span> London, UK</li>
+								<li><span>Compnay SIze:</span>  2k Employee</li>
+								<li><span>Industry:</span> <a href="#">Technology</a></li>
+								<li><span>Phone:</span> +1234 567 8910</li>
+								<li><span>Email:</span> <a href="#">info@dropbox.com</a></li>
+								<li><span>Website:</span> <a href="#">www.dropbox.com</a></li>
+								<li><span></span></li>
+							</ul>
+						</div><!-- /.widger -->
+					</div><!-- /.widget-area -->
+				</div><!-- /.tr-sidebar -->
+			</div>
+		</div><!-- row -->
+  </div>
+</div>
+<%= render partial: "pages/add_resume_banner" %>
+<%= render partial: "layouts/footer" %>
