@@ -28,6 +28,8 @@ gem 'mail_form'
 gem 'sparkpost_rails'
 
 gem "fog-aws"
+gem 'pry'
+
 
 gem 'aws-sdk', '~> 2.3'
 
