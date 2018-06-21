@@ -2,28 +2,29 @@
   %h3
   Welcome
   =current_manager.email
-  %table.table.table-striped
-    %thead
-      %tr
-        %th{:scope => "col"} #
-        %th{:scope => "col"} Company
-        %th{:scope => "col"} Contact Person
-        %th{:scope => "col"} Address
-        %th{:scope => "col"} Phone
-        %th{:scope => "col"} Comments
-        %th{:scope => "col"} Other
-        %th{:scope => "col"} Status
-        %th{:scope => "col"} Edit
-    %tbody
-    - @clients.each_with_index do |client, index|
-      %tr
-        %th{:scope => "row"} #{index + 1}
-        %td.noselect #{client.company}
-        %td.noselect #{client.contact_name}
-        %td.noselect #{client.address}
-        %td.noselect #{client.phone_number}
-        %td.noselect #{client.comments}
-        %td.noselect #{client.other}
-        %td{class: color_client_status(client.status)}
-          #{client.status}
-        %td= link_to "Edit", edit_client_path(client), class:"btn btn-sm btn-success"
+  %div{style:"overflow-x:auto;"}
+    %table.table.table-striped
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} Company
+          %th{:scope => "col"} Contact Person
+          %th{:scope => "col"} Address
+          %th{:scope => "col"} Phone
+          %th{:scope => "col"} Comments
+          %th{:scope => "col"} Other
+          %th{:scope => "col"} Status
+          %th{:scope => "col"} Edit
+      %tbody
+      - @clients.each_with_index do |client, index|
+        %tr
+          %th{:scope => "row"} #{index + 1}
+          %td.noselect #{client.company}
+          %td.noselect #{client.contact_name}
+          %td.noselect #{client.address}
+          %td.noselect #{client.phone_number}
+          %td.noselect #{client.comments}
+          %td.noselect #{client.other}
+          %td{class: color_client_status(client.status)}
+            #{client.status}
+          %td= link_to "Edit", edit_client_path(client), class:"btn btn-sm btn-success"
