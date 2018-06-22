@@ -29,6 +29,7 @@ gem 'sparkpost_rails'
 
 gem "fog-aws"
 gem 'pry'
+gem 'pry-rails', :group => :development
 
 
 gem 'aws-sdk', '~> 2.3'

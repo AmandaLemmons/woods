@@ -1,6 +1,9 @@
 .container-fluid
   %br
+  %button.btn.btn-primary.text-center{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}+ New Client
+  = render partial: "clients/modal"
   %div{style:"overflow-x:auto;"}
+
     %table.table.table-striped
       %thead
         %tr

@@ -1,9 +1,8 @@
 .container-fluid
   .row
     .col.align-self-start
-      %h3
-      Welcome
-      =current_manager.email
+      %button.btn.btn-primary.text-center{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}+ New Client
+      = render partial: "clients/modal"
   .row
     .col-md-12.text-center
       %h4 Inactive Clients

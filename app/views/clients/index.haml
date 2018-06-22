@@ -1,7 +1,6 @@
 .container-fluid
-  %h3
-  Welcome
-  =current_manager.email
+  %button.btn.btn-primary.text-center{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}+ New Client
+  = render partial: "clients/modal"
   %div{style:"overflow-x:auto;"}
     %table.table.table-striped
       %thead
@@ -23,6 +22,12 @@
           %td.noselect #{client.contact_name}
           %td.noselect #{client.address}
           %td.noselect #{client.phone_number}
+          -# -if client.comments.length > 200
+          -#   %td.noselect
+          -#     =truncate"#{client.comments}", :length => 200, separator: ' '
+          -#     %link_to{"data-target" => "#commentsModal", "data-toggle" => "modal"}Read More
+          -#     =render "clients/comments_modal", :locals=>{:client => client}
+          -# -else
           %td.noselect #{client.comments}
           %td.noselect #{client.other}
           %td{class: color_client_status(client.status)}
