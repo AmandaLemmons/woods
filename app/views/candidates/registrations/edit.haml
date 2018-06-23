@@ -22,7 +22,7 @@
                 = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
                 = f.input :name, required: true
                 = f.input :username, required: true
-                = f.input :location, required: true, placeholder: "City, Country"
+                = f.input :collection_select, ("North East Coast Of Scotland", "North East England", "Glasgow", "Cumbria", "Manchester", "Liverpool", "Leeds", "Sheffield", "Hull", "Chester, North Wales &The Wirral", "Birmingham", "South Wales", "Bristol", "Plymouth & The South West", "Southampton & South East", "London South", "London West", "London East", "London North", "Central London", "Northern Ireland", "East Anglia", "Leicester", "Nottingham"),required: true, placeholder: "City, Country"
                 = f.input :phone_number, required: true
                 = f.input :date_of_birth, required: true, as: :date, start_year: Date.today.year - 90,
                                         end_year: Date.today.year - 12, discard_day: false,
