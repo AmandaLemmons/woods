@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
 
   def contact_us
     @contact = Contact.new
+    @managers = Manager.all
 
   end
 
