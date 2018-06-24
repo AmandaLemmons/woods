@@ -1,0 +1,72 @@
+<div class= "container-fluid">
+  <div class="row">
+    <div class= "col-sm-12">
+      <h5 class="text-center">Active Clients </h5>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-sm-12">
+      <button class= "btn btn-primary" data-target="#exampleModal" data-toggle = "modal" type ="button">+ New Client</button>
+      <%= render partial: "clients/modal"%>
+      </div>
+    </div>
+  </div>
+  <div style="overflow-x:auto;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope = "col"> # </th>
+          <th scope = "col"> Company </th>
+          <th scope = "col"> Contact Person </th>
+          <th scope = "col"> Address </th>
+          <th scope = "col"> Phone </th>
+          <th scope = "col"> Comments </th>
+          <th scope = "col"> Other </th>
+          <th scope = "col"> Status </th>
+          <th scope = "col"> Edit </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each_with_index do |client, index| %>
+        <tr>
+          <th scope = "row"> # <%= index + 1 %> </th>
+            <td class="noselect"> <%= client.company %> </td>
+            <td class="noselect"> <%= client.contact_name %> </td>
+            <td class="noselect"> <%= client.address %> </td>
+            <td class="noselect"> <%= client.phone_number %> </td>
+
+            <% if client.comments.length > 250 %>
+              <td class="noselect"><%= truncate(client.comments, length: 250) %>
+                <%= link_to '...Read more', '', class: "read-more-#{client.id}",  style:" color: #336600;"%></td>
+            <script>
+              $('.read-more-<%= client.id %>').on('click', function(e) {
+                e.preventDefault()
+                $(this).parent().html('<%= escape_javascript client.comments %>')
+              })
+            </script>
+          <% else %>
+            <td class="noselect"><%= client.comments %></td>
+          <% end %>
+
+          <% if client.other.length > 250 %>
+            <td class="noselect"><%= truncate(client.other, length: 250) %>
+              <%= link_to '...Read more', '', class: "read-more-#{client.id}",  style:" color: #336600;" %></td>
+          <script>
+            $('.read-more-<%= client.id %>').on('click', function(e) {
+              e.preventDefault()
+              $(this).parent().html('<%= escape_javascript client.comments %>')
+            })
+          </script>
+        <% else %>
+          <td class="noselect"><%= client.other %></td>
+        <% end %>
+
+          <td class= "color_client_status('#{client.status}')"> <%= client.status %></td>
+
+          <td><%= link_to "Edit", edit_client_path(client), class:"btn btn-sm btn-success" %> </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
