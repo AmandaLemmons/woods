@@ -1,5 +1,10 @@
 .container-fluid
-  %button.btn.btn-primary.text-center{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}+ New Client
+  .row
+    .col-sm-12
+      %h5.text-center Welcome #{current_manager.name } -- #{current_manager.franchise_area}
+  .row.text-center
+    .col-sm-12
+      %button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}+ New Client
   = render partial: "clients/modal"
   %div{style:"overflow-x:auto;"}
     %table.table.table-striped

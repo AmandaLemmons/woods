@@ -52,16 +52,13 @@
 					</div>
 					<div class="col-12 col-md-12 col-lg-4">
 						<div class="section">
-							<span class="tr-title">Contact Info</span>
-							<p><%= link_to "Get directions to our offices.", "https://goo.gl/maps/szforAqWmNT2", :target => "_blank", :style=>'color: #7b7b7b;' %>
-							</p>
-							<span class="tr-title info-list">Franchises</span>
+							<span class="tr-title">Franchise Info</span>
 							<% @managers.each do |manager| %>
 								<ul class="tr-list info-list">
-									<li> <%= manager.franchise_area %> </li>
-									<li> <%= manager.name %> </li>
+									<li><%= link_to "Get directions to our office.", "https://goo.gl/maps/oJrtCzThSxQ2", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
+									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
 									<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br><%= manager.office %><br><%= manager.street %><br><%= manager.city %><br><%= manager.zip %></span></li>
-									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T: <%= manager.phone_number %> <br>F: 01244 470400</span></li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T: <%= manager.phone_number %></span></li>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "info@woodsrecruitment.co.uk", "#{manager.email}"%> </span></li>
 								</ul>
 							<% end %>
