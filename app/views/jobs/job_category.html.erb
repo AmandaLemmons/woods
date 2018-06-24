@@ -33,7 +33,13 @@
                   <span><a href="#" class="btn btn-primary"><%= job.category.name%></a></span>
                 </div>
                 <div>
-                  <p> <%= job.description %></p>
+									<p> <%= truncate"#{job.description}", :length => 200, separator: ' '%>
+										<% if job.description.length > 200 %>
+											<%= link_to truncate('Read More'), job_details_path(job.id), :style=>'color: #3d464d;'  %>
+									<% else %>
+										<%= job.description %> <%= link_to truncate('More Info'), job_details_path(job.id), :style=>'color: #3d464d;'  %>
+									<% end %>
+								</p>
                 </div>
                 <ul class="tr-list job-meta">
                   <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= job.location%></li>
