@@ -52,9 +52,46 @@
                                   supported by Chrome and Opera */
 }
 
-// .table-striped > tbody > tr:nth-child(odd) > {
-//   td, th {
-//     background-color: #336600;
-//     color: white;
-//   }
-// }
+.table-striped > tbody > tr:nth-child(odd) > {
+  td, th {
+    background-color: #336600;
+    color: white;
+  }
+}
+
+.flyer {
+  /* ... */
+  width: 769px;
+  height: 100%;
+  background: image-url("large_logo");
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .flyer {
+    /* ... */
+    width: 769px;
+    height: 100%;
+    background: image-url("flyer.png");
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .flyer {
+    /* ... */
+    width: 769px;
+    height: 100%;
+    background: image-url("flyer.png");
+  }
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 768px) {
+  .flyer {
+    /* ... */
+    // width: 320px;
+    height: 100%;
+    background: image-url("xs-flyer.png");
+  }
+}
