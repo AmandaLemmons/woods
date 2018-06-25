@@ -17,14 +17,7 @@
 			<br>
 			<div class="contact-section">
 				<div class="row">
-					<div class="col-12 col-md-12 col-lg-8" >
-						<div class="section">
-							<span class="tr-title">Contact Info</span>
-							<p>Please get in contact with us to discuss future partnerships.</p>
-							<%= render partial: "contacts/form" %>
-						</div>
-					</div>
-					<div class="col-12 col-md-12 col-lg-4">
+					<div class="col-12 col-md-12 col-lg-3">
 						<div class="section">
 							<span class="tr-title">Contact Info</span>
 							<p><%= link_to "Get directions to our offices.", "https://goo.gl/maps/szforAqWmNT2", :target => "_blank", :style=>'color: #7b7b7b;' %>
@@ -44,13 +37,14 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="contact-section">
-				<div class="row">
-					<div class="col-12 col-md-12 col-lg-8" >
+					<div class="col-12 col-md-12 col-lg-6" >
+						<div class="section">
+							<span class="tr-title">Contact Info</span>
+							<p>Please get in contact with us to discuss future partnerships.</p>
+							<%= render partial: "contacts/form" %>
+						</div>
 					</div>
-					<div class="col-12 col-md-12 col-lg-4">
+					<div class="col-12 col-md-12 col-lg-3">
 						<div class="section">
 							<span class="tr-title">Franchise Info</span>
 							<% @managers.each do |manager| %>
@@ -64,8 +58,9 @@
 							<% end %>
 						</div>
 					</div>
-
-
+				</div>
+			</div>
+			
 
 		</div><!-- /.container -->
 	</div><!-- /.page-content -->
