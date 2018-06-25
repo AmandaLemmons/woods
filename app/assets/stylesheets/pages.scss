@@ -62,8 +62,8 @@
 .flyer {
   /* ... */
   width: 769px;
-  height: 100%;
-  background: image-url("large_logo");
+  height: 1090px;
+  background: image-url("flyer-large");
 }
 
 
@@ -71,8 +71,10 @@
   .flyer {
     /* ... */
     width: 769px;
-    height: 100%;
-    background: image-url("flyer.png");
+    height: 1090px;
+    background: image-url("flyer-large");
+    background-repeat: no-repeat;
+
   }
 }
 
@@ -80,9 +82,9 @@
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .flyer {
     /* ... */
-    width: 769px;
-    height: 100%;
-    background: image-url("flyer.png");
+    width: 600px;
+    height: 851px;
+    background: image-url("flyer-med");
   }
 }
 
@@ -90,8 +92,8 @@
 @media only screen and (max-width: 768px) {
   .flyer {
     /* ... */
-    // width: 320px;
-    height: 100%;
+    width: 300px;
+    height: 425px;
     background: image-url("xs-flyer.png");
   }
 }
