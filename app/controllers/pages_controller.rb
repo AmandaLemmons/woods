@@ -19,6 +19,10 @@ class PagesController < ApplicationController
     @testimonials = Testimonial.all
   end
 
+  def franchise
+  end
+  
+
 
 
 
