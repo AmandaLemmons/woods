@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_23_101953) do
+ActiveRecord::Schema.define(version: 2018_06_25_171113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,6 +107,8 @@ ActiveRecord::Schema.define(version: 2018_06_23_101953) do
     t.float "longitude"
     t.integer "experience_level_id"
     t.integer "salary_id"
+    t.text "responsibilities"
+    t.text "requirements"
   end
 
   create_table "managers", force: :cascade do |t|
