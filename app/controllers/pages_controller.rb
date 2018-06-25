@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def about_us
     @testimonials = Testimonial.all
-
+    @categories = Category.all
   end
 
   def testimonials
@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 
   def franchise
   end
-  
+
 
 
 

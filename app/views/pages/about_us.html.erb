@@ -30,11 +30,9 @@
 				<p class="text-justify">We supply temporary and permanent recruitment to clients in all areas of the UK covering England, Scotland, Wales and Northern Ireland.<br>
 				We have a purpose built database system designed on our website containing a vast number of candidates who have registered for vacancies in the following Industry sectors:<p>
 				<ul>
-					<li>Commercial</li>
-					<li> Engineering</li>
-					<li>Construction</li>
-					<li>Manufacturing</li>
-					<li>Industrial</li>
+					<% @categories.each do |category|%>
+						<li><%=category.name%></li>
+					<% end %>
 				</ul>
 				<p class="text-justify">Our Business Associates are able to offer a consultative approach to all your recruitment needs and are on hand to listen to your requirements. They pride themselves in their ability to understand clients and tailor their approach to fit in with your business.<br>
 				We invest heavily in a number of methods to attract individuals to our Agency and have exclusive deals with Indeed, Reed, LinkedIn, Facebook, Twitter and other job sites. Listening to their needs we match them effectively to vacancies.<br>
