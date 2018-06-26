@@ -100,3 +100,13 @@
     background: image-url("xs-flyer.png");
   }
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card img {
+  border:5px solid #5DDDD3;
+  padding:5px;
+  height:290px;
+  width: 290px;
+}

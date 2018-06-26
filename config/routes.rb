@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'apply/:id' => 'resumes#apply', as: :apply_for_job
   get 'testimonials' => 'pages#testimonials', as: :testimonials
   get 'franchise' => 'pages#franchise', as: :franchise
+  get 'meet-the-team' => 'pages#meet_the_team', as: :meet_the_team
 
 
 end

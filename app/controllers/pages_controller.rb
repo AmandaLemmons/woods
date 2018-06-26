@@ -22,6 +22,9 @@ class PagesController < ApplicationController
   def franchise
   end
 
+  def meet_the_team
+  end
+
 
 
 
