@@ -52,28 +52,31 @@
                                   supported by Chrome and Opera */
 }
 
-.table-striped > tbody > tr:nth-child(odd) > {
-  td, th {
-    background-color: #336600;
-    color: white;
-  }
-}
+// .table-striped > tbody > tr:nth-child(odd) > {
+//   td, th {
+//     background-color: #336600;
+//     color: white;
+//   }
+// }
 
 .flyer {
-  /* ... */
-  width: 769px;
-  height: 1090px;
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 921px;
   background: image-url("flyer-large");
+  display: block; /*for the img inside your div */
+  margin: 0 auto;
 }
 
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .flyer {
-    /* ... */
-    width: 769px;
-    height: 1090px;
-    background: image-url("flyer-large");
     background-repeat: no-repeat;
+    width: 650px;
+    height: 921px;
+    background: image-url("flyer-large");
+    display: block; /*for the img inside your div */
+    margin: 0 auto;
 
   }
 }
@@ -81,9 +84,9 @@
 /* Mobile Landscape */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .flyer {
-    /* ... */
-    width: 600px;
-    height: 851px;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 709px;
     background: image-url("flyer-med");
   }
 }
