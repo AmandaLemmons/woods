@@ -16,14 +16,14 @@ body{
     z-index: 1;
 }
 .ourTeam-box{
-    border-top: 6px solid #5DDDD3;
+    border-top: 6px solid #336600;
     background-color: #FFFFFF;
 }
 .section1{
     padding: 30px 0px 0px 0px;
 }
 .section1 img{
-    border:5px solid #5DDDD3;
+    border:5px solid #336600;
     padding:5px;
     border-radius:50%;
     height:170px;
@@ -33,12 +33,12 @@ body{
     font-size:20px;
     color:#C1C1C1;
     margin:0px;
-    border-bottom:2px solid #5DDDD3;
+    border-bottom:2px solid #336600;
     display: inline-block;
     padding: 10px 0px;
 }
 .section2 p{
-    background-color: #5DDDD3;
+    background-color: #336600;
     display: inline-block;
     font-weight: bold;
     color:#fff;
@@ -70,40 +70,51 @@ body{
     padding:3px;
     border-radius: 2px;
     font-size: 12px;
-    background-color: #5DDDD3;
+    background-color: #336600;
     cursor: pointer;
 }
 .section-info{
-    border-top:6px solid #90DFAA;
+    border-top:6px solid #660033;
 }
 .section-danger{
-    border-top:6px solid #FD8469;
+    border-top:6px solid #006666;
 }
 .section-info .section1 img{
-    border:5px solid #90DFAA;
+    border:5px solid #336600;
     padding:5px;
 }
 .section-info .section2 p{
-    background-color: #90DFAA;
+    background-color: #660033;
     color:#fff;
 }
 .section-danger .section2 p{
-    background-color: #FD8469;
+    background-color: #006666;
     color:#fff;
 }
 .section-danger .section1 img{
-    border:5px solid #FD8469;
+    border:5px solid #006666;
     padding:5px;
 }
 .section-info .section4 i{
-    background-color: #90DFAA;
+    background-color: #660033;
 }
 .section-danger .section4 i{
-    background-color: #FD8469;
+    background-color: #006666;
 }
 .section-info .section2 h1{
-    border-bottom:2px solid #90DFAA;
+    border-bottom:2px solid #660033;
 }
 .section-danger .section2 h1{
-    border-bottom:2px solid #FD8469;
+    border-bottom:2px solid #006666;
+}
+.section5{
+  padding: 30px 0px 0px 0px;
+}
+
+.section5 img{
+    border:5px solid #660033;
+    padding:5px;
+    border-radius:50%;
+    height:170px;
+    width: 170px;
 }
