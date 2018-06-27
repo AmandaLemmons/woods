@@ -28,8 +28,8 @@
 
            <tr>
               <td><%= resume.name %></td>
-              <td><%= link_to "Download Resume", resume.attachment_url %></td>
-              <td><%= link_to "Edit ", edit_resume_path(id: resume.id) %></td>
+              <td><%= link_to "Download Resume", resume.attachment_url,  style:"color: #336600;" %></td>
+              <td><%= link_to "Edit ", edit_resume_path(id: resume.id), style:"color: #007bff;" %></td>
               <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
            </tr>
 
