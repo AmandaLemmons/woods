@@ -12,7 +12,6 @@ permit_params :company, :address, :phone_number, :email, :comments, :other, :con
     column :phone_number
     column :email
     column :comments
-    column :other
     column :manager
 
 

@@ -21,7 +21,6 @@
           <th scope = "col"> Address </th>
           <th scope = "col"> Phone </th>
           <th scope = "col"> Comments </th>
-          <th scope = "col"> Other </th>
           <th scope = "col"> Status </th>
           <th scope = "col"> Edit </th>
         </tr>
@@ -47,19 +46,6 @@
           <% else %>
             <td class="noselect"><%= client.comments %></td>
           <% end %>
-
-          <% if client.other.length > 250 %>
-            <td class="noselect"><%= truncate(client.other, length: 250) %>
-              <%= link_to '...Read more', '', class: "read-more-#{client.id}", style:" color: #336600;"  %></td>
-          <script>
-            $('.read-more-<%= client.id %>').on('click', function(e) {
-              e.preventDefault()
-              $(this).parent().html('<%= escape_javascript client.comments %>')
-            })
-          </script>
-        <% else %>
-          <td class="noselect"><%= client.other %></td>
-        <% end %>
 
           <td class= "color_client_status('#{client.status}')"> <%= client.status %></td>
 
