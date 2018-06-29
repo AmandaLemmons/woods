@@ -15,9 +15,10 @@
 				<div id="map"></div>
 			</div><!-- /.tr-map -->
 			<br>
+
 			<div class="contact-section">
 				<div class="row">
-					<div class="col-12 col-md-12 col-lg-3">
+					<div class="col-12 col-md-12 col-lg-4">
 						<div class="section">
 							<span class="tr-title">Head Office Info</span>
 							<p><%= link_to "Get directions to our head office.", "https://goo.gl/maps/szforAqWmNT2", :target => "_blank", :style=>'color: #7b7b7b;' %>
@@ -36,21 +37,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-12 col-lg-3">
-						<div class="section">
-							<span class="tr-title">Franchise Info</span>
-							<% @managers.each do |manager| %>
-								<ul class="tr-list info-list">
-									<li><%= link_to "Get directions to our office.", "https://goo.gl/maps/oJrtCzThSxQ2", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
-									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
-									<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br><%= manager.office %><br><%= manager.street %><br><%= manager.city %><br><%= manager.zip %></span></li>
-									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T:<a href="tel: '#{manager.phone_number}' ">01244 345560 </a> <%= manager.phone_number %></span></li>
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "info@woodsrecruitment.co.uk", "#{manager.email}"%> </span></li>
-								</ul>
-							<% end %>
-						</div>
-					</div>
-					<div class="col-12 col-md-12 col-lg-6" >
+					<div class="col-12 col-md-12 col-lg-8" >
 						<div class="section">
 							<span class="tr-title">Contact Info</span>
 							<p>Please get in contact with us to discuss future partnerships.</p>
@@ -59,6 +46,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="contact-section">
+				<div class="row">
+				<% @managers.each do |manager| %>
+				<div class="section">
+					<div class="col-12 col-md-12 col-lg-6">
+							<span class="tr-title">Franchise Info</span>
+								<ul class="tr-list info-list">
+									<li><%= link_to "Get directions to our office.", "https://goo.gl/maps/oJrtCzThSxQ2", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
+									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
+									<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br><%= manager.office %><br><%= manager.street %><br><%= manager.city %><br><%= manager.zip %></span></li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T:<a href="tel: '#{manager.phone_number}' ">01244 345560 </a> <%= manager.phone_number %></span></li>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "info@woodsrecruitment.co.uk", "#{manager.email}"%> </span></li>
+								</ul>
+						</div>
+					</div>
+
+				<% end %>
+			</div>
+		</div>
 
 
 		</div><!-- /.container -->

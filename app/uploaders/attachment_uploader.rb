@@ -12,6 +12,10 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+ #  def store_dir
+ #   folder = respond_to?(:folder_name) ? folder_name : model.class.to_s.underscore
+ #   base_upload_dir << "#{folder}/#{model.id}"
+ # end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
@@ -41,7 +45,11 @@ class AttachmentUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+
+ #  private
+ #
+ # def base_upload_dir
+ #   "uploads/#{Rails.env}/"
+ # end
+
 end
