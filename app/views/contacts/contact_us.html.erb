@@ -46,12 +46,13 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="contact-section">
 				<div class="row">
 				<% @managers.each do |manager| %>
-				<div class="section">
-					<div class="col-12 col-md-12 col-lg-6">
-							<span class="tr-title">Franchise Info</span>
+					<div class="col-12 col-md-12 col-lg-4">
+						<div class="section">
+							<span class="tr-title">Franchise Information for <br><%= manager.franchise_area %></span>
 								<ul class="tr-list info-list">
 									<li><%= link_to "Get directions to our office.", "https://goo.gl/maps/oJrtCzThSxQ2", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
 									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
