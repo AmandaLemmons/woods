@@ -101,6 +101,48 @@
   }
 }
 
+.flyer-northern-ireland {
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 921px;
+  background: image-url("northern-ireland-large");
+  display: block; /*for the img inside your div */
+  margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .flyer-northern-ireland {
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 921px;
+    background: image-url("northern-ireland-large");
+    display: block; /*for the img inside your div */
+    margin: 0 auto;
+
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .flyer-northern-ireland {
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 709px;
+    background: image-url("northern-ireland-med");
+  }
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 768px) {
+  .flyer-northern-ireland {
+    /* ... */
+    width: 300px;
+    height: 425px;
+    background: image-url("northern-ireland-xs");
+  }
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
