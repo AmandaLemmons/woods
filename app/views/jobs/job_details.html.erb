@@ -10,7 +10,7 @@
    					<li><i class="fa fa-map-marker" aria-hidden="true"></i><%= @job.experience_level.try(:level) %></li>
    					<li><i class="fa fa-money" aria-hidden="true"></i><%= @job.salary.try(:salary)%></li>
    					<li><i class="fa fa-tags" aria-hidden="true"></i><%= @job.category.try(:name) %></li>
-   					<li><i class="fa fa-hourglass-start" aria-hidden="true"></i>Application Deadline : June 27, 2017</li>
+   					<!-- <i class="fa fa-hourglass-start" aria-hidden="true"></i>Application Deadline : June 27, 2017</li> -->
    				</ul>
  			</div>
  		</div><!-- /.container -->
@@ -41,7 +41,7 @@
 								<li><div class="pull-left"><i class="fa fa-line-chart" aria-hidden="true"></i></div> <div class="media-body"><span>Experience:</span><%= @job.experience_level.try(:level)%></div></li>
 							</ul>
 						</div><!-- /.widger -->
-						
+
 					</div><!-- /.widget-area -->
 				</div><!-- /.tr-sidebar -->
 			</div>
