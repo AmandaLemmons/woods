@@ -7,7 +7,7 @@
  				</div>
  				<ul class="tr-list job-meta list-inline">
    					<li><i class="fa fa-map-signs" aria-hidden="true"></i><%= @job.location %></li>
-   					<li><i class="fa fa-map-marker" aria-hidden="true"></i><%= @job.experience_level.try(:level) %></li>
+   					<li><i class="fa fa-line-chart" aria-hidden="true"></i><%= @job.experience_level.try(:level)%> Level </li>
    					<li><i class="fa fa-money" aria-hidden="true"></i><%= @job.salary.try(:salary)%></li>
    					<li><i class="fa fa-tags" aria-hidden="true"></i><%= @job.category.try(:name) %></li>
    					<!-- <i class="fa fa-hourglass-start" aria-hidden="true"></i>Application Deadline : June 27, 2017</li> -->
@@ -39,6 +39,13 @@
 								<li><div class="pull-left"><i class="fa fa-calendar" aria-hidden="true"></i></div> <div class="media-body"><span>Published:</span><%=time_ago_in_words(@job.updated_at) %> ago</div></li>
 								<li><div class="pull-left"><i class="fa fa-industry" aria-hidden="true"></i></div> <div class="media-body"><span>Industry:</span><%= @job.category.try(:name)%></div></li>
 								<li><div class="pull-left"><i class="fa fa-line-chart" aria-hidden="true"></i></div> <div class="media-body"><span>Experience:</span><%= @job.experience_level.try(:level)%></div></li>
+
+              	<li><div class="pull-left"><i class="fa fa-map-signs" aria-hidden="true"></i></div> <div class="media-body"><span>Location:</span><%= @job.location %></div></li>
+
+                <li><div class="pull-left"><i class="fa fa-money" aria-hidden="true"></i></div> <div class="media-body"><span>Salary:</span><%= @job.salary.try(:salary)%></div></li>
+
+
+
 							</ul>
 						</div><!-- /.widger -->
 
