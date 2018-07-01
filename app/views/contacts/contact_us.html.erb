@@ -58,7 +58,7 @@
 									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
 									<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br><%= manager.office %><br><%= manager.street %><br><%= manager.city %><br><%= manager.zip %></span></li>
 									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T:<a href="tel: '#{manager.phone_number}' "> </a> <%= manager.phone_number %></span></li>
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "info@woodsrecruitment.co.uk", "#{manager.email}"%> </span></li>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="media-body"><%= mail_to "#{manager.email}", "#{manager.email}"%> </span></li>
 								</ul>
 						</div>
 					</div>
