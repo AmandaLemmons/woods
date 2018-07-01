@@ -2,7 +2,7 @@ ActiveAdmin.register Manager do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :email, :password, :password_confirmation, :phone_number, :name, :company, :office, :street, :city, :zip, :franchise_area
+permit_params :email, :password, :password_confirmation, :phone_number, :name, :company, :office, :street, :city, :zip, :franchise_area, :directions
 
   index do
     column :email
