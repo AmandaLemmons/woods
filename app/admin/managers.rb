@@ -13,6 +13,7 @@ permit_params :email, :password, :password_confirmation, :phone_number, :name, :
     column :street
     column :city
     column :zip
+    column :directions
     column :franchise_area
 
 
@@ -29,6 +30,7 @@ permit_params :email, :password, :password_confirmation, :phone_number, :name, :
       f.input :street
       f.input :city
       f.input :zip
+      f.input :directions
       f.input :franchise_area
       f.input :password
       f.input :password_confirmation

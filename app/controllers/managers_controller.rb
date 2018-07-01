@@ -18,6 +18,6 @@ class ManagersController < ApplicationController
 
 private
   def manager_params
-        params.require(:manager).permit(:phone_number, :name, :company, :office, :street, :city, :zip, :email, :password, :password_confirmation, :franchise_area)
+        params.require(:manager).permit(:phone_number, :name, :company, :office, :street, :city, :zip, :email, :password, :password_confirmation, :franchise_area, :directions)
   end
 end

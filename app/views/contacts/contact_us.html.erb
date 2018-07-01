@@ -54,7 +54,7 @@
 						<div class="section">
 							<span class="tr-title">Franchise Information for <br><%= manager.franchise_area %></span>
 								<ul class="tr-list info-list">
-									<li><%= link_to "Get directions to our office.", "https://goo.gl/maps/oJrtCzThSxQ2", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
+									<li><%= link_to "Get directions to our office.", "#{manager.directions}", :target => "_blank", :style=>'color: #7b7b7b;' %></li>
 									<li> <%= manager.franchise_area %> <br> <%= manager.name %> </li>
 									<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="media-body"><br><%= manager.office %><br><%= manager.street %><br><%= manager.city %><br><%= manager.zip %></span></li>
 									<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="media-body"><br>T:<a href="tel: '#{manager.phone_number}' "> </a> <%= manager.phone_number %></span></li>
