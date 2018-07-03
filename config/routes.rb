@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get 'testimonials' => 'pages#testimonials', as: :testimonials
   get 'franchise' => 'pages#franchise', as: :franchise
   get 'meet-the-team' => 'pages#meet_the_team', as: :meet_the_team
-  get 'terms-and-conditions' => 'pages#terms_and_conditions', as: :terms_and_conditions
+  get 'privacy-policy' => 'pages#privacy_policy', as: :privacy_policy
 
 
 end

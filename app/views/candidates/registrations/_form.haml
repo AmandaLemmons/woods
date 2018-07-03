@@ -16,7 +16,7 @@
                 = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
                 = f.input :name, required: true
                 = f.input :username, required: true
-                = f.input :location, collection: ["Birmingham", "Bristol",  "Chester", "Cumbria", "East Anglia", "Glasgow", "Hull", "Leeds", "Leicester", "Liverpool", "London Central", "London East", "London North", "London South", "London West", "Manchester", "Nottingham", "North East Coast Of Scotland", "North East England", "North Wales & The Wirral", "Northern Ireland", "Plymouth & The South West", "Sheffield", "Southampton & South East", "South Wales"], required: true               
+                = f.input :location, collection: ["Birmingham", "Bristol",  "Chester", "Cumbria", "East Anglia", "Glasgow", "Hull", "Leeds", "Leicester", "Liverpool", "London Central", "London East", "London North", "London South", "London West", "Manchester", "Nottingham", "North East Coast Of Scotland", "North East England", "North Wales & The Wirral", "Northern Ireland", "Plymouth & The South West", "Sheffield", "Southampton & South East", "South Wales"], required: true
                 = f.input :phone_number, required: true
                 = f.input :date_of_birth, required: true, as: :date, start_year: Date.today.year - 90,
                                         end_year: Date.today.year - 12, discard_day: false,
@@ -24,6 +24,8 @@
                 = f.input :gender,  collection: [['0', 'Female'], ['1', 'Male']], label_method: :second, value_method: :first
 
                 = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}
+
+
 
               .form-actions
                 = f.button :submit, "Update", class:"btn btn-primary"

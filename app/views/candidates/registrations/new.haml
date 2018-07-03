@@ -21,7 +21,7 @@
                 - if devise_mapping.confirmable? && resource.pending_reconfirmation?
                   %p
                     Currently waiting confirmation for: #{resource.unconfirmed_email}
-                = f.input :password, autocomplete: "off", required: true, hint: "leave it blank if you don't want to change it", required: false
+                = f.input :password, autocomplete: "off", required: true
                 = f.input :password_confirmation, required: true
                 = f.input :name, required: true
                 = f.input :username, required: true
@@ -35,6 +35,9 @@
                 = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, required: true
               %br
               .form-actions
+                = f.input :privacy_policy, required: true, :as => :boolean, :label =>false
+                = link_to "I accept the Privacy Policy", "/privacy-policy", target: "_blank"
+              %br
                 = f.button :submit, "Create", class:"btn btn-primary"
 
                 = render "candidates/shared/links"

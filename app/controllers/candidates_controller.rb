@@ -25,7 +25,7 @@ class CandidatesController < ApplicationController
   end
 
   def candidate_params
-        params.require(:candidate).permit(:email, :name, :date_of_birth, :category_id, :location, :username, :gender, :phone_number, :password, :confirmaton_password)
+        params.require(:candidate).permit(:email, :name, :date_of_birth, :category_id, :location, :username, :gender, :phone_number, :password, :confirmaton_password, :privacy_policy)
   end
 
   # def set_s3_direct_post
