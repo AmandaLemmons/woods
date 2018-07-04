@@ -13,6 +13,7 @@ permit_params :name, :username, :location, :date_of_birth, :category_id, :phone_
     column :username
     column :gender
     column :phone_number
+    column :privacy_policy
 
 
     actions
@@ -30,6 +31,8 @@ permit_params :name, :username, :location, :date_of_birth, :category_id, :phone_
       f.input :date_of_birth
       f.input :location
       f.input :phone_number
+      f.input :privacy_policy
+
 
 
     end
