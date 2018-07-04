@@ -35,8 +35,9 @@
                 = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, required: true
               %br
               .form-actions
-                = f.input :privacy_policy, required: true, :as => :boolean, :label =>false
-                = link_to "I accept the Privacy Policy", "/privacy-policy", target: "_blank"
+                .row
+                  = f.input :privacy_policy, required: true, :as => :boolean, :label =>false
+                  = link_to "I accept the terms of using your website and agree to be contacted by phone and email.", "/privacy-policy", target: "_blank"
               %br
                 = f.button :submit, "Create", class:"btn btn-primary"
 
