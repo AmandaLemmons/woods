@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'franchise' => 'pages#franchise', as: :franchise
   get 'meet-the-team' => 'pages#meet_the_team', as: :meet_the_team
   get 'privacy-policy' => 'pages#privacy_policy', as: :privacy_policy
+  get 'ico' => 'pages#ico', as: :ico
 
 
 end

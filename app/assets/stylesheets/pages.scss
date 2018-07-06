@@ -152,3 +152,45 @@
   height:290px;
   width: 290px;
 }
+
+.ico {
+  background-repeat: no-repeat;
+  width: 830px;
+  height: 761px;
+  background: image-url("ico.png");
+  display: block; /*for the img inside your div */
+  margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .ico {
+    background-repeat: no-repeat;
+    width: 830px;
+    height: 761px;
+    background: image-url("ico.png");
+    display: block; /*for the img inside your div */
+    margin: 0 auto;
+
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .ico {
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 709px;
+    background: image-url("ico-med");
+  }
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 768px) {
+  .ico {
+    /* ... */
+    width: 300px;
+    height: 425px;
+    background: image-url("xs-ico");
+  }
+}
