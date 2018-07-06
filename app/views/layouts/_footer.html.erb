@@ -2,7 +2,7 @@
   <div class="footer-top section-padding">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="footer-widget">
             <h3>About Us</h3>
             <ul class="tr-list">
@@ -14,7 +14,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="footer-widget">
             <h3>Job Seekers</h3>
             <ul class="tr-list">
@@ -24,12 +24,18 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="footer-widget">
             <h3>Managers</h3>
             <ul class="tr-list">
               <li><%= link_to "Sign In", new_manager_session_path %></li>
             </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <!-- <h3>Managers</h3> -->
+            <%= image_tag ("rec.jpg"), class:"img-responsive"%>
           </div>
         </div>
         <!-- <div class="col-sm-3">
@@ -52,7 +58,7 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="copyright">
-        <p>Copyright © 2017 | <a href="#">WoodsRecruitment.co.uk</a> | All rights reserved. | <%= link_to "Privacy Policy", privacy_policy_path %></p>
+        <p>Copyright © 2017 | <a href="#">WoodsRecruitment.co.uk</a> | All rights reserved. | <%= link_to "Privacy Policy", privacy_policy_path %> </p>
       </div>
       <div class="footer-social pull-right">
         <ul class="tr-list">
