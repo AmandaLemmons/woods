@@ -29,10 +29,10 @@ class PagesController < ApplicationController
   end
 
   def ico
-  end 
+  end
 
-
-
+  def rec
+  end
 
 
 
