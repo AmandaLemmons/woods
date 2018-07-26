@@ -2,7 +2,14 @@
 
 class Managers::SessionsController < Devise::SessionsController
   include Accessible
-  skip_before_action :check_candidate, only: :destroy
+  # skip_before_action :check_candidate, only: :destroy
+
+  private
+
+     def after_sign_in_path_for(resource)
+        # manager_path(id: current_manager.id)
+        clients_path
+     end
 
   # before_action :configure_sign_in_params, only: [:create]
 

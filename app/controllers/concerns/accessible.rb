@@ -1,8 +1,8 @@
 module Accessible
   extend ActiveSupport::Concern
-  included do
-    before_action :check_candidate
-  end
+  # included do
+  #   before_action :check_candidate
+  # end
 
   protected
   def check_candidate

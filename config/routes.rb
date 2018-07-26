@@ -12,10 +12,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  devise_for :managers do
-    root to: 'clients#index'
-  end
 
+
+  devise_for :managers ,controllers: { sessions: 'managers/sessions', registrations: 'managers/registrations', passwords: 'managers/passwords'}
   devise_for :candidates, controllers: { sessions: 'candidates/sessions', registrations: 'candidates/registrations', passwords: 'candidates/passwords'}
   resources :candidates, :only => [:show, :edit]
 
