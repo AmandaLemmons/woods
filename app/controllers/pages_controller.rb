@@ -12,7 +12,6 @@ class PagesController < ApplicationController
 
   def about_us
     @testimonials = Testimonial.all
-
     @categories = Category.order('name ASC')
   end
 
